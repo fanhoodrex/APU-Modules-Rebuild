@@ -1,0 +1,3 @@
+LectID||StdID||Time||Venue||Status||Reason
+LECT0002||null||11:00||C-04-05||Available||null
+LECT0002||null||12:00||C-04-05||Available||null

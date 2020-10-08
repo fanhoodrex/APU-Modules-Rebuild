@@ -1,0 +1,5 @@
+038/OODJ/degree/RM500
+106/SNA/degree/RM400
+046/SDM/degree/RM600
+077/PSMOD/degree/RM200
+789/OSCA/degree/RM230

@@ -1,0 +1,5 @@
+LectID||StdID||Time||Venue||Status||Reason
+LECT0001||null||10:00||B-06-01||Available||null
+LECT0002||null||10:30||B-06-01||Available||null
+LECT0002||null||11:30||B-06-01||Available||null
+LECT0002||STD0002||12:30||B-06-01||Booked||sdsi

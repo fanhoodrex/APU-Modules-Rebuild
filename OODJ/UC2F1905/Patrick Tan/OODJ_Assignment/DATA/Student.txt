@@ -1,0 +1,6 @@
+ID||Username||Password||Name||ContactNo||Email||IntakeCode||Gender
+STD0001||Stdtester1||123456789||Student @ Tester||12345678||tanhanke@iodf.com||DKLLAKD||Male
+STD0002||Stdtester2||123456789||Testingabc||0987654||tanhanke@iodf.com||JDSFL||Female
+STD0006||Stdtester6||123456789||Tester @ Student||0987654||tanhanke@iodf.com||JDSFL||Female
+STD0007||Patricktan||Admin@123456||Patrick Tan||018-47166866||patrick23698tan@gmail.com||UC2F1905SE||Male
+STD0008||stdtester99||1234567890||Adm @ tester||0112740273||s@gmc.com||das||Male
