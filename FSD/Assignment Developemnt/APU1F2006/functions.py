@@ -13,14 +13,6 @@ def menu():
     """)
     return None
 
-def update():
-    """update the quantity of parts in warehouse"""
-    pass
-
-def check(part):
-    """check for available quantity in warehouse"""
-    pass
-
 def AssemblySections_CodeList():
     """function for creating assembly list containing assembly code """
     list_assembly = [] # initialize assembly_sections variable in local scope
@@ -55,12 +47,11 @@ def Warehouses_CodeList():
     print(f"Successfully create all warehouses:{list_warehouse}")
     return list_warehouse
 
-
 def Part():
     """Function for creating individual part element"""
     part_details = {} # initialize part variable in local scope
-    assembly_key = [] # initialize assembly_key variable in local scope
-    warehouse_key = [] # initialize warehouse_key variable in local scope
+    warehouse_value = [] # initialize warehouse_value variable in local scope
+    warehouse_value = [] # initialize warehouse_value variable in local scope
 
     part_details['id'] = input("What is the unique id should be given for this parts?: ") # assign the unique id key/value for part dict
     part_details['initial_quantity'] = int(input("How many is the initial quantity for this part?:")) # assign the initial quantity key/value for part dict
@@ -68,15 +59,14 @@ def Part():
     suppliersList.append(part_details["supplier"])
 
     while True: # while loop for selecting those warehouses with which the each part are supplied 
-        print(Warehouses_CodeList)
         ware_input = input("What warehouses is this part under? Enter 0 to finish:")
-        if ware_input == str(0):
-            break
+        if ware_input in Warehouses_CodeList"
+            warehouse_value.append(ware_input)
         else:
-            warehouse_key.append(ware_input)
+            print("Pls enter valid warehouses:")
             continue
             time.sleep(1)
-    part_details['warehouse'] = warehouse_key # assign the warehouse list as value to the warehosue key in part dict
+    part_details['warehouse'] = warehouse_value # assign the warehouse list as value to the warehosue key in part dict
 
     while True: # while loop for selecting those assembly sections with which the each part are supplied 
         print(AssemblySections_CodeList)
@@ -84,31 +74,13 @@ def Part():
         if section_input == str(0):
             break
         else:
-            assembly_key.append(section_input)
+            warehouse_value.append(section_input)
             continue
             time.sleep(1)
-    part_details['assembly section'] = assembly_key # assign the assembly sections as value to the assembly section key in part dict
+    part_details['assembly section'] = warehouse_value # assign the assembly sections as value to the assembly section key in part dict
 
     time.sleep(1)
     print(f"""Successfully created a single part, shown as below
 -----------------------------------------------------------------
-{part_details}""") # use f-string with triple quotation
+    {part_details}""") # use f-string with triple quotation
     return part_details
-
-def Supplier_CodeList():
-    """function for listing suppliers code"""
-    list_suppliers = [] # initialize the empty list for warehouse code in local scope
-    while True: # While Loop to enter the warehouses
-        num_warehouses = int(input("Pls enter the code for supplier:"))
-        if num_warehouses >= 3:
-            for num in range(num_warehouses):
-                warehouse = input(f"What is the {num+1} warehouse?:")
-                list_warehouse.append(warehouse) # append individual section input to assembly sections list
-            break
-        else:
-            print("Sorry, there should be at least 3 warehouses")
-            time.sleep(1)
-            continue
-    time.sleep(1)
-    print(f"Successfully create all warehouses:{list_warehouse}")
-    return list_warehouse
