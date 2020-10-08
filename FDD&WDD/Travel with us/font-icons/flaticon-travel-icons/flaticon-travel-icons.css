@@ -1,0 +1,61 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 19/12/2016 09:24
+  	*/
+
+@font-face {
+  font-family: "Flaticon Travel Icons";
+  src: url("flaticon-travel-icons.eot");
+  src: url("flaticon-travel-iconsd41d.eot?#iefix") format("embedded-opentype"),
+       url("flaticon-travel-icons.woff") format("woff"),
+       url("flaticon-travel-icons.ttf") format("truetype"),
+       url("flaticon-travel-icons.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon Travel Icons";
+    src: url("flaticon-travel-icons.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-travel-icons-"]:before, [class*=" flaticon-travel-icons-"]:before,
+[class^="flaticon-travel-icons-"]:after, [class*=" flaticon-travel-icons-"]:after {   
+  font-family: Flaticon Travel Icons;
+  font-weight: normal;
+  font-style: normal;
+	margin-left: 0;
+}
+
+.flaticon-travel-icons-airplane:before { content: "\f100"; }
+.flaticon-travel-icons-bicycle:before { content: "\f101"; }
+.flaticon-travel-icons-boat:before { content: "\f102"; }
+.flaticon-travel-icons-boot:before { content: "\f103"; }
+.flaticon-travel-icons-bus:before { content: "\f104"; }
+.flaticon-travel-icons-car:before { content: "\f105"; }
+.flaticon-travel-icons-caravan:before { content: "\f106"; }
+.flaticon-travel-icons-cocktail:before { content: "\f107"; }
+.flaticon-travel-icons-compass:before { content: "\f108"; }
+.flaticon-travel-icons-do-not-disturb:before { content: "\f109"; }
+.flaticon-travel-icons-earth-globe:before { content: "\f10a"; }
+.flaticon-travel-icons-earth-globe-1:before { content: "\f10b"; }
+.flaticon-travel-icons-hotel:before { content: "\f10c"; }
+.flaticon-travel-icons-island:before { content: "\f10d"; }
+.flaticon-travel-icons-kayak:before { content: "\f10e"; }
+.flaticon-travel-icons-luggage:before { content: "\f10f"; }
+.flaticon-travel-icons-map:before { content: "\f110"; }
+.flaticon-travel-icons-mountain:before { content: "\f111"; }
+.flaticon-travel-icons-panels:before { content: "\f112"; }
+.flaticon-travel-icons-passport:before { content: "\f113"; }
+.flaticon-travel-icons-photo-camera:before { content: "\f114"; }
+.flaticon-travel-icons-ring:before { content: "\f115"; }
+.flaticon-travel-icons-sailboat:before { content: "\f116"; }
+.flaticon-travel-icons-ship:before { content: "\f117"; }
+.flaticon-travel-icons-snorkel:before { content: "\f118"; }
+.flaticon-travel-icons-suitcase:before { content: "\f119"; }
+.flaticon-travel-icons-suitcase-1:before { content: "\f11a"; }
+.flaticon-travel-icons-sunbed:before { content: "\f11b"; }
+.flaticon-travel-icons-tent:before { content: "\f11c"; }
+.flaticon-travel-icons-train:before { content: "\f11d"; }
