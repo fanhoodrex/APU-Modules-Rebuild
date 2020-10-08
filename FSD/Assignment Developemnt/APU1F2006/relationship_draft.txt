@@ -51,12 +51,23 @@ Part inventory = {
     W3:[{P6},{p7}...],
 }
 
+output：
+{'WBS': {'ES': 10, 'BWS': 10, 'AS': 10}, 'WAY': {'ES': 20, 'BWS': 20, 'AS': 20}, 'WBR': {'ES': 30, 'BWS': 30, 'AS': 30}}
 
-
-a = {
-    'WBS':{
-        'ES':20,
-        'BWS':30,
-        'AS':15
-    }
+receive from supplier
+{
+    WBS:{'ES': 10, 'BWS': 10, 'AS': 10}
+    WAY:{'ES': 20, 'BWS': 20, 'AS': 20}
+    WBR:{'ES': 30, 'BWS': 30, 'AS': 30}
 }
+
+receive from supplier
+{
+    WBS:{'Part1': 10, 'Part2': 10, 'Part3': 10}
+    WAY:{'ES': 20, 'BWS': 20, 'AS': 20}
+    WBR:{'ES': 30, 'BWS': 30, 'AS': 30}
+}
+
+WBS:{'Part1': 10, 'Part2': 20, 'Part3': 30, 'Part4': 40, 'Part5': 50}
+WAY:{'Part1': 50, 'Part2': 40, 'Part3': 30, 'Part4': 20, 'Part5': 10}
+WBR:{'Part1': 20, 'Part2': 30, 'Part3': 10, 'Part4': 40, 'Part5': 50}
