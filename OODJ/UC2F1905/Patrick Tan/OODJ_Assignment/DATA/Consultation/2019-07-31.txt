@@ -1,0 +1,2 @@
+LectID||StdID||Time||Venue||Status||Reason
+LECT0008||null||10:00||AUD 6||Available||null

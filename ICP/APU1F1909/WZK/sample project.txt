@@ -1,0 +1,111 @@
+// sample project.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include<stdio.h>
+#include <string.h>
+#include<stdlib.h>
+int n, i;
+//function for writing entry of medicine into file
+void write()
+{
+	FILE *fp;
+	char dat[20];
+	char unam[20];
+	char bnam[20];
+	char mn[15];
+	int cos;
+	printf("\n Enter Date :");
+	scanf("%s", &dat);
+	printf("\n Enter Name of the Customer :");
+	scanf("%s", &unam);
+	printf("\n Enter Mobile Number :");
+	scanf("%s", &mn);
+	printf("\n Enter Name of the Medicine :");
+	scanf("%s", &bnam);
+	printf("\n Enter the Cost of the Medicine :");
+	scanf("%d", &cos);
+
+	fp = fopen("Book.txt", "a");
+	fprintf(fp, "\n %s %s %s %s %d \n", dat, unam, mn, bnam, cos);
+	printf("\n\n\t Record Written Successfully !!");
+	fclose(fp);
+}
+
+//function to read data
+void View_All()
+{
+	char dat[20];
+	char unam[20];
+	char bnam[20];
+	char mn[15];
+	int cos;
+	FILE *view;
+	view = fopen("Book.txt", "r");
+	
+	printf("\nDATE\tCUST_NAME\tMED_NAME\tMOB_NO\tCOST");
+
+	while (fscanf(view, "%s %s %s %s %d ", &dat, &unam, &mn, &bnam, &cos) != EOF)
+	{
+		printf("\n%s %s %s %s %d ", dat, unam, bnam, mn, cos);
+	}
+
+	fclose(view);
+}
+//function to search recordby date
+
+void search(char lm[])
+{
+	FILE *fp;
+	char date[20];
+	char uname[20];
+	char bname[20];
+	char mno[15];
+	int cost;
+	int res;
+	fp = fopen("Book.txt", "r");
+	while (fscanf(fp, "%s %s %s %s %ld \n", date, uname, mno, bname, &cost) != EOF)
+	{
+		res = strcmp(date, lm);
+		if (res == 0)
+		{
+			printf("\n\n Customer Name = %s", uname);
+			printf("\n Mobile Number=%s", mno);
+			printf("\n Medicine Name=%s", bname);
+			printf("\n Medicine Cost=%ld", cost);
+		}
+
+	}
+	fclose(fp);
+}
+
+void main()
+{
+	char ch;
+	char lm[20];
+	do
+	{
+		printf("\n\n\t**** Welcome to MEDICAL SHOP***");
+		printf("\n Press 1 to Create Entry");
+		printf("\n Press 2 to View All");
+		printf("\n Press 3 to Search");
+		printf("\n Press 0 to exit");
+		printf("\n\n Enter your choice :");
+		scanf("%d", &ch);
+		switch (ch)
+		{
+		case 1:write();
+			break;
+		case 2:View_All();
+			break;
+		case 3:printf("\n Enter the Date: ");
+			scanf("%s", &lm);
+			search(lm);
+			break;
+		case 0:exit(0);
+		default:printf("\n Invalid Entry!");
+		}
+	} while (ch != 0);
+}
+
+

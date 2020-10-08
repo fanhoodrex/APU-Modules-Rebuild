@@ -1,0 +1,33 @@
+submission on 10 June 7 PM
+two filter (specific intake->032020)
+ -turnitin assignment hand in: softcopy of report
+ - moodle assignment hand in: softcopy of report & system
+presentation on 11 June
+
+
+void search(char lm[])
+{
+    FILE *fp;
+    char date[20];
+    char uname[20];
+    char bname[20];
+    char mno[15];
+    int cost;
+    int res;
+    fp = fopen("Book.txt", "r");
+    while (fscanf(fp, "%s %s %s %s %ld \n", date, uname, mno, bname, &cost) != EOF)
+    {
+        res = strcmp(date, lm);
+        if (res == 0)
+        {
+            printf("\n\n Customer Name = %s", uname);
+            printf("\n Mobile Number=%s", mno);
+            printf("\n Medicine Name=%s", bname);
+            printf("\n Medicine Cost=%ld", cost);
+        }
+
+ 
+
+    }
+    fclose(fp);
+}

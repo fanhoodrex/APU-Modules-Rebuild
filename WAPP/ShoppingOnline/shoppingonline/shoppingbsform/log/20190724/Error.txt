@@ -1,0 +1,144 @@
+[2019-07-24 20:22:03.4047] [12] System.Data.SqlClient.SqlException (0x80131904): An attempt to attach an auto-named database for file G:\MYCODES\gitee\shoppingbsform\shoppingbsform.Model\ShoppingDatabase.mdf failed. A database with the same name exists, or specified file cannot be opened, or it is located on UNC share.
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 shoppingbsform.DAL.BaseDAL`1.get_Connection() 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform.DAL\BaseDAL.cs:行号 69
+   在 shoppingbsform.DAL.BaseDAL`1.FindByName(String name, Object obj) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform.DAL\BaseDAL.cs:行号 102
+   在 shoppingbsform.DAL.UserDal.GetByUserName(String username) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform.DAL\UserDal.cs:行号 17
+   在 shoppingbsform.ViewModels.UserViewModel.Login(String username, String password, Int32& type) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\ViewModels\UserViewModel.cs:行号 19
+ClientConnectionId:8afc155a-3c90-4bf1-b65f-26dc6c19029d
+Error Number:15350,State:1,Class:14
+[2019-07-24 21:58:38.4122] [14] System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.User' with unique index 'NonClusteredIndexusername'. The duplicate key value is (admin).
+The statement has been terminated.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.QueryMultipleImpl(IDbConnection cnn, CommandDefinition& command)
+   在 SqlServerAdapter.Insert(IDbConnection connection, IDbTransaction transaction, Nullable`1 commandTimeout, String tableName, String columnList, String parameterList, IEnumerable`1 keyProperties, Object entityToInsert)
+   在 Dapper.Contrib.Extensions.SqlMapperExtensions.Insert[T](IDbConnection connection, T entityToInsert, IDbTransaction transaction, Nullable`1 commandTimeout)
+   在 shoppingbsform.DAL.BaseDAL`1.Insert(T info) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform.DAL\BaseDAL.cs:行号 115
+   在 shoppingbsform.ViewModels.UserViewModel.SignUp(String username, String email, String password) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\ViewModels\UserViewModel.cs:行号 55
+ClientConnectionId:c13b446f-0664-4c9b-85fa-63024d291d82
+Error Number:2601,State:1,Class:14
+[2019-07-24 22:28:48.8577] [13] System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.User' with unique index 'NonClusteredIndexusername'. The duplicate key value is (admin).
+The statement has been terminated.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.QueryMultipleImpl(IDbConnection cnn, CommandDefinition& command)
+   在 SqlServerAdapter.Insert(IDbConnection connection, IDbTransaction transaction, Nullable`1 commandTimeout, String tableName, String columnList, String parameterList, IEnumerable`1 keyProperties, Object entityToInsert)
+   在 Dapper.Contrib.Extensions.SqlMapperExtensions.Insert[T](IDbConnection connection, T entityToInsert, IDbTransaction transaction, Nullable`1 commandTimeout)
+   在 shoppingbsform.DAL.BaseDAL`1.Insert(T info) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform.DAL\BaseDAL.cs:行号 115
+   在 shoppingbsform.ViewModels.UserViewModel.SignUp(String username, String email, String password) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\ViewModels\UserViewModel.cs:行号 55
+ClientConnectionId:40da77f5-c55e-409f-bb2a-3ede8a79d1b5
+Error Number:2601,State:1,Class:14
+[2019-07-24 22:37:09.1557] [12] 获取用户信息失败
+[2019-07-24 22:37:09.2155] [12] System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 18
+[2019-07-24 22:37:41.3625] [16] 获取用户信息失败
+[2019-07-24 22:37:41.3625] [16] System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 18
+[2019-07-24 22:38:07.0787] [16] 获取用户信息失败
+[2019-07-24 22:38:07.0787] [16] System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 18
+[2019-07-24 22:51:55.4330] [9] 获取用户信息失败
+[2019-07-24 22:51:55.4699] [9] System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 18
+[2019-07-24 22:52:03.6550] [19] 获取用户信息失败
+[2019-07-24 22:52:03.6550] [19] System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 18
+[2019-07-24 22:53:29.8634] [6] 获取用户信息失败
+[2019-07-24 22:53:29.9202] [6] System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 33
+[2019-07-24 22:55:05.8626] [11] 获取用户信息失败
+[2019-07-24 22:55:05.8626] [11] System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 33
+[2019-07-24 22:55:32.2719] [5] 获取用户信息失败
+[2019-07-24 22:55:32.2719] [5] System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 33
+[2019-07-24 22:55:49.3762] [13] 获取用户信息失败
+[2019-07-24 22:55:49.3762] [13] System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 33
+[2019-07-24 23:05:51.4107] [6] 获取用户信息失败
+[2019-07-24 23:05:51.4556] [6] System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 33
+[2019-07-24 23:05:53.8981] [6] 获取用户信息失败
+[2019-07-24 23:05:53.8981] [6] System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 33
+[2019-07-24 23:06:11.4870] [9] 获取用户信息失败
+[2019-07-24 23:06:11.4870] [9] System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 shoppingbsform.Views.PersonalInfo.Page_Load(Object sender, EventArgs e) 位置 E:\otherwork\outofwork\shoppingbsform\shoppingbsform\Views\PersonalInfo.aspx.cs:行号 33

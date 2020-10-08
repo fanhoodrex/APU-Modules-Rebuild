@@ -1,0 +1,9 @@
+Jack WmainSt 213-748-6141 man 10000 123456 Saving 10000.000000
+Geo Alhambra 626-289-3571 woman 10001 123456 Current 20000.000000
+mayun1 china_hangzhou 8888-8888 man 10002 666666 Saving 993000.000000
+
+
+geeksforgeeks. (n.d.). C Programming Language. Retrieved from geeksforgeeks: https://www.geeksforgeeks.org/c-programming-language/
+TutorialPoint. (n.d.). C - Arrays. Retrieved from TutorialsPoint: https://www.tutorialspoint.com/cprogramming/c_arrays.htm
+Tutorialpoint. (n.d.). C - Structures. Retrieved from Tutorialspoint: https://www.tutorialspoint.com/cprogramming/c_structures.html
+

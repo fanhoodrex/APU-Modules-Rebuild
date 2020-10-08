@@ -1,0 +1,6 @@
+ID||Username||Password||Name||ContactNo||Email||Specialized||Gender
+LECT0001||Lectester1||1234||Testing||123456||tanhanke@iodf.com||SE||Male
+LECT0002||Lectester2||1234||Testing||0184716686||tanhanke@iodf.com||CYB||Female
+LECT0006||Lectester6||1234||Tester @ Lecutrer||345678||tanhanke@iodf.com||CYB||Female
+LECT0007||Lectester||123456789||Lecture @ tester2||011-2738899||hi@gmail.com||SE||Male
+LECT0008||lectester99||1234567890||Patrick||0114819988||patrick@g.com||se||Male

@@ -1,0 +1,110 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 19/02/2016 14:50
+  	*/
+
+@font-face {
+  font-family: "Flaticon Ventures";
+  src: url("flaticon-ventures.eot");
+  src: url("flaticon-venturesd41d.eot?#iefix") format("embedded-opentype"),
+       url("flaticon-ventures.woff") format("woff"),
+       url("flaticon-ventures.ttf") format("truetype"),
+       url("flaticon-ventures.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon Ventures";
+    src: url("flaticon-ventures.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-ventures-"]:before, [class*=" flaticon-ventures-"]:before,
+[class^="flaticon-ventures-"]:after, [class*=" flaticon-ventures-"]:after {   
+  font-family: "Flaticon Ventures";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.flaticon-ventures-abacus-with-stand:before { content: "\f100"; }
+.flaticon-ventures-appointment-book:before { content: "\f101"; }
+.flaticon-ventures-bank-safe-box:before { content: "\f102"; }
+.flaticon-ventures-bank-sign:before { content: "\f103"; }
+.flaticon-ventures-big-cart:before { content: "\f104"; }
+.flaticon-ventures-big-cloud:before { content: "\f105"; }
+.flaticon-ventures-big-envelope:before { content: "\f106"; }
+.flaticon-ventures-big-invoice:before { content: "\f107"; }
+.flaticon-ventures-big-lifesaver:before { content: "\f108"; }
+.flaticon-ventures-big-light:before { content: "\f109"; }
+.flaticon-ventures-big-telephone:before { content: "\f10a"; }
+.flaticon-ventures-big-towers:before { content: "\f10b"; }
+.flaticon-ventures-browser-with-text-lines:before { content: "\f10c"; }
+.flaticon-ventures-building-with-big-windows:before { content: "\f10d"; }
+.flaticon-ventures-business-cards:before { content: "\f10e"; }
+.flaticon-ventures-cactus-in-a-pot:before { content: "\f10f"; }
+.flaticon-ventures-cart-facing-left:before { content: "\f110"; }
+.flaticon-ventures-chair-with-wheels:before { content: "\f111"; }
+.flaticon-ventures-clipboard-with-blank-paper:before { content: "\f112"; }
+.flaticon-ventures-clock-with-clockwise:before { content: "\f113"; }
+.flaticon-ventures-closed-book:before { content: "\f114"; }
+.flaticon-ventures-computer-mouse-with-long-cable:before { content: "\f115"; }
+.flaticon-ventures-curriculum-with-picture:before { content: "\f116"; }
+.flaticon-ventures-desk-lamp-facing-left:before { content: "\f117"; }
+.flaticon-ventures-diagram-scheme:before { content: "\f118"; }
+.flaticon-ventures-editor-pencil:before { content: "\f119"; }
+.flaticon-ventures-factory-with-chimney:before { content: "\f11a"; }
+.flaticon-ventures-filing-cabinet:before { content: "\f11b"; }
+.flaticon-ventures-funds:before { content: "\f11c"; }
+.flaticon-ventures-glasses-with-reflection:before { content: "\f11d"; }
+.flaticon-ventures-hand-touching-button:before { content: "\f11e"; }
+.flaticon-ventures-headphones-with-thin-mic:before { content: "\f11f"; }
+.flaticon-ventures-horizontal-tablet-with-line:before { content: "\f120"; }
+.flaticon-ventures-hot-drink-facing-left:before { content: "\f121"; }
+.flaticon-ventures-inclined-clip:before { content: "\f122"; }
+.flaticon-ventures-inclined-compass:before { content: "\f123"; }
+.flaticon-ventures-inclined-key:before { content: "\f124"; }
+.flaticon-ventures-inclined-label:before { content: "\f125"; }
+.flaticon-ventures-inclined-magnifying-glass:before { content: "\f126"; }
+.flaticon-ventures-inclined-paper-plane:before { content: "\f127"; }
+.flaticon-ventures-inclined-pen:before { content: "\f128"; }
+.flaticon-ventures-inclined-pin:before { content: "\f129"; }
+.flaticon-ventures-inclined-rocket:before { content: "\f12a"; }
+.flaticon-ventures-letter-and-envelope:before { content: "\f12b"; }
+.flaticon-ventures-line-stats:before { content: "\f12c"; }
+.flaticon-ventures-list-with-text:before { content: "\f12d"; }
+.flaticon-ventures-long-tie:before { content: "\f12e"; }
+.flaticon-ventures-mathematic-calculator:before { content: "\f12f"; }
+.flaticon-ventures-megaphone-facing-right:before { content: "\f130"; }
+.flaticon-ventures-month-calendar:before { content: "\f131"; }
+.flaticon-ventures-networking-group:before { content: "\f132"; }
+.flaticon-ventures-offering-left-hand:before { content: "\f133"; }
+.flaticon-ventures-open-book-with-bookmark:before { content: "\f134"; }
+.flaticon-ventures-open-laptop:before { content: "\f135"; }
+.flaticon-ventures-package-with-parachute:before { content: "\f136"; }
+.flaticon-ventures-padlock-closed:before { content: "\f137"; }
+.flaticon-ventures-pc-tower-and-monitor:before { content: "\f138"; }
+.flaticon-ventures-pen-and-paper:before { content: "\f139"; }
+.flaticon-ventures-phone-on-circle:before { content: "\f13a"; }
+.flaticon-ventures-piggy-bank-with-coin:before { content: "\f13b"; }
+.flaticon-ventures-plane-facing-right:before { content: "\f13c"; }
+.flaticon-ventures-projector-screen:before { content: "\f13d"; }
+.flaticon-ventures-public-speech:before { content: "\f13e"; }
+.flaticon-ventures-quality-badge:before { content: "\f13f"; }
+.flaticon-ventures-repair-tools:before { content: "\f140"; }
+.flaticon-ventures-screen-with-at:before { content: "\f141"; }
+.flaticon-ventures-shop-with-sign:before { content: "\f142"; }
+.flaticon-ventures-shopping-bag-open:before { content: "\f143"; }
+.flaticon-ventures-speech-bubble-with-text:before { content: "\f144"; }
+.flaticon-ventures-teacher-briefcase:before { content: "\f145"; }
+.flaticon-ventures-three-bars:before { content: "\f146"; }
+.flaticon-ventures-three-binders:before { content: "\f147"; }
+.flaticon-ventures-truck-facing-right:before { content: "\f148"; }
+.flaticon-ventures-two-contacts:before { content: "\f149"; }
+.flaticon-ventures-two-gears:before { content: "\f14a"; }
+.flaticon-ventures-two-money-cards:before { content: "\f14b"; }
+.flaticon-ventures-wallet-closed:before { content: "\f14c"; }
+.flaticon-ventures-web-home:before { content: "\f14d"; }
+.flaticon-ventures-world-globe:before { content: "\f14e"; }
+.flaticon-ventures-you-are-here:before { content: "\f14f"; }

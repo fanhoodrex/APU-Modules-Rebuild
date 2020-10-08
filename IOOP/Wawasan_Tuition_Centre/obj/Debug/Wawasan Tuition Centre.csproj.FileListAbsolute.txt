@@ -1,0 +1,26 @@
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\bin\Debug\Wawasan Tuition Centre.exe.config
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\bin\Debug\Wawasan Tuition Centre.exe
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\bin\Debug\Wawasan Tuition Centre.pdb
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan Tuition Centre.csprojAssemblyReference.cache
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Properties.Resources.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan Tuition Centre.csproj.GenerateResource.cache
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan Tuition Centre.csproj.CoreCompileInputs.cache
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan Tuition Centre.exe
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan Tuition Centre.pdb
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Login.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.AddFees.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.TuitionTime.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Class_Schedule.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Student_Check_Payment.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Student_MainPage.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Student_ResetPassword.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Student_StudentRegister.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Student_UpdateAndEditProfile.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Tutor_AddClass.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Tutor_Check_Class_Student.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Staff_MainPage.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Staff_StudentEnrollment.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Tutor_Mainpage.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\Wawasan_Tuition_Centre.Tutor_UpdateProfile.resources
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\RdlCompile.cache
+C:\Users\Tan Wei Xian\source\repos\Wawasan Tuition Centre\Wawasan Tuition Centre\obj\Debug\RdlCompile.compiled

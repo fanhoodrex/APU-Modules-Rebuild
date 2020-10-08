@@ -1,0 +1,104 @@
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Foodie.dll.config
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Foodie.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Foodie.pdb
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Antlr3.Runtime.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\EntityFramework.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\EntityFramework.SqlServer.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Newtonsoft.Json.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Owin.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\System.Web.Optimization.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\System.Web.Providers.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\WebGrease.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\System.Web.Optimization.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Antlr3.Runtime.pdb
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Newtonsoft.Json.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\EntityFramework.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\EntityFramework.SqlServer.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\System.Web.Providers.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\obj\Debug\Foodie.csprojResolveAssemblyReference.cache
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\obj\Debug\Foodie.dll
+C:\Users\DANIEL SEE\Desktop\Foodie\Foodie\obj\Debug\Foodie.pdb
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Foodie.dll.config
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Foodie.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Foodie.pdb
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Antlr3.Runtime.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\EntityFramework.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\EntityFramework.SqlServer.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Newtonsoft.Json.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Owin.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\System.Web.Optimization.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\System.Web.Providers.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\WebGrease.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\System.Web.Optimization.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Antlr3.Runtime.pdb
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Newtonsoft.Json.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\EntityFramework.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\EntityFramework.SqlServer.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\System.Web.Providers.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\jack0626\Desktop\Foodie\Foodie\obj\Debug\Foodie.csprojResolveAssemblyReference.cache
+C:\Users\jack0626\Desktop\Foodie\Foodie\obj\Debug\Foodie.dll
+C:\Users\jack0626\Desktop\Foodie\Foodie\obj\Debug\Foodie.pdb

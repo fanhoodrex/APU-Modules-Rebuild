@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+    int No[8] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+    int i;
+    for (i = 0; i < 8; i++)
+    {
+        if (i == 0)
+        {
+            printf("\nNo:%d,Service type:Remove virus, malware or spyware;Needed days:2;Service Fee:20RM(normal),50RM(urgent)",No[i]);
+        }
+        else if (i == 1)
+        {
+            printf("\nNo:%d,Service type:Troubleshot and fix computer running slow;Needed days:2;Service Fee:40RM(normal),70RM(urgent)", No[i]);
+        }
+        else if (i == 2) {
+            printf("\nNo:%d,Service type:Laptop screen replacement;Needed days:3;Service Fee:380RM(normal),430RM(urgent)", No[i]);
+        }
+        else if (i == 3) {
+            printf("\nNo:%d,Service type:Laptop keyboard replacement;Needed days:2;Service Fee:160RM(normal),200RM(urgent)", No[i]);
+        }
+        else if (i == 4) {
+            printf("\nNo:%d,Service type:Laptop battery replacement;Needed days:1;Service Fee:180RM(normal),210RM(urgent)", No[i]);
+        }
+        else if (i == 5) {
+            printf("\nNo:%d,Service type:Operating System Format and Installation;Needed days:2;Service Fee:50RM(normal),80RM(urgent)", No[i]);
+        }
+        else if (i == 6) {
+            printf("\nNo:%d,Service type:Data backup and recovery;Needed days:2;Service Fee:100RM(normal),150RM(urgent)", No[i]);
+        }
+        else{
+            printf("\nNo:%d,Service type:Internet connectivity issues;Needed days:1;Service Fee:50RM(normal),75RM(urgent)", No[i]);
+        }
+    }
+}
