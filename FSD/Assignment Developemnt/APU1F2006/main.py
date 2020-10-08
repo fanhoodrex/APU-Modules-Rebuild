@@ -3,10 +3,11 @@ from functions import * # import all the user defined function written in functi
 
 while True:
     PartList = [] # the part list in local scope
+    suppliersList = [] # initialize empty supplier list in local scope
     menu() # call for menu function
 
     choice = int(input("Select your choice:"))
-    if choice == 1:
+    if choice == 1: # Parts Inventory Creation in Warehouses
         while True:
             sel = int(input("\n1.Create Warehouses\n2.Create Assembly Sections\n3.Create part's detail\n0.Exit to main menu\nEnter:")) # Sub-menu for Parts Inventory Creation in Warehouses
             if sel == 1:
@@ -29,14 +30,16 @@ while True:
                 continue
 
             os.system("cls") # clear all the output screen for a clear sub-menu for Parts Inventory Creation in Warehouses
-            time.sleep(3)
+            time.sleep()
             print("All the parts created are shown as below")
             for item in PartList: # iterate all the element in the PartList
-                print(item)
                 time.sleep(1)
+                print(item)
     elif choice == 2:
         pass
     elif choice == 3:
+        input("1.Sort all parts by id in ascending order\n2.Show all the parts that have quantity less than 10 units")
+
         pass # Parts Inventory Tracking
     elif choice == 4:
         pass # Searching Functionalities

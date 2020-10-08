@@ -42,7 +42,7 @@ def Warehouses_CodeList():
     list_warehouse = [] # initialize the empty list for warehouse code in local scope
     while True: # While Loop to enter the warehouses
         num_warehouses = int(input("How many warehouses are there in total?:"))
-        if num_warehouses >= 3:
+        if num_warehouses >= 3: # at least three warehouses
             for num in range(num_warehouses):
                 warehouse = input(f"What is the {num+1} warehouse?:")
                 list_warehouse.append(warehouse) # append individual section input to assembly sections list
@@ -63,9 +63,10 @@ def Part():
     warehouse_key = [] # initialize warehouse_key variable in local scope
 
     part_details['id'] = input("What is the unique id should be given for this parts?: ") # assign the unique id key/value for part dict
-    part_details['initial_quantity'] = int(input("How much is the initial quantity for this part?:")) # assign the initial quantity key/value for part dict
-    part_details['supplier'] = input("Enter the supplier for this part, leave space if supplier is excluded:") # assign the supplier key/value for part dict
-    
+    part_details['initial_quantity'] = int(input("How many is the initial quantity for this part?:")) # assign the initial quantity key/value for part dict
+    part_details['supplier'] = input("Enter one supplier only for this part:") # assign the supplier key/value for part dict
+    suppliersList.append(part_details["supplier"])
+
     while True: # while loop for selecting those warehouses with which the each part are supplied 
         print(Warehouses_CodeList)
         ware_input = input("What warehouses is this part under? Enter 0 to finish:")
@@ -79,7 +80,7 @@ def Part():
 
     while True: # while loop for selecting those assembly sections with which the each part are supplied 
         print(AssemblySections_CodeList)
-        section_input = input("What assambly sections is this part supplied with, Enter 0 to finish:")
+        section_input = input("What assambly sections is this part provided to?:")
         if section_input == str(0):
             break
         else:
@@ -93,3 +94,21 @@ def Part():
 -----------------------------------------------------------------
 {part_details}""") # use f-string with triple quotation
     return part_details
+
+def Supplier_CodeList():
+    """function for listing suppliers code"""
+    list_suppliers = [] # initialize the empty list for warehouse code in local scope
+    while True: # While Loop to enter the warehouses
+        num_warehouses = int(input("Pls enter the code for supplier:"))
+        if num_warehouses >= 3:
+            for num in range(num_warehouses):
+                warehouse = input(f"What is the {num+1} warehouse?:")
+                list_warehouse.append(warehouse) # append individual section input to assembly sections list
+            break
+        else:
+            print("Sorry, there should be at least 3 warehouses")
+            time.sleep(1)
+            continue
+    time.sleep(1)
+    print(f"Successfully create all warehouses:{list_warehouse}")
+    return list_warehouse
