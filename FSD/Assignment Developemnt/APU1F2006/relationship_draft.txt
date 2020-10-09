@@ -13,61 +13,37 @@ Each part can be provided to a particular assembly section only
 one warehouse receives more than one parts from suppliers 
 one warehouse provide parts for section (one warehouse correspond to more than one section) 
 
-
 5.car part
 
 6.supplier
 Each part can be supplied by exactly one supplier only
 one supplier can supply more than one part
 
-
-division = warehouse > sections > parts > supplier
+-----------------------------------------------------
 
 part = {
     id:1,
     initial_quantity:10,
     assembly_sections:'ES',
     supplier:'supplier1',
-
 }
+
+master program output:
+All the parts created are shown as below
+[
+    {'id': "p1'", 'initial_quantity': 10, 'supplier': '', 'warehouse': ['w1'], 'assembly section': ['p2', 'a1', 'a2']}
+    {'id': 'p2', 'initial_quantity': 20, 'supplier': 's2', 'warehouse': ['w2', 'w3'], 'assembly section': ['a1', 'a3']}
+]
 
 ---------------------------------
-
-assembly_sections = [s1,s2,s3...]
-warehouse > [1,2,3,4...]
-
-warehosue <> assembly = { ?
-    w1:assembly1,
-    w2:assembly2,
-    w3:assembly3
-}
-
-single part = {}
-Part > [{},{},{},{},{},{},{}...] 
+FSD_Dev program output:
 
 Part inventory = {
-    W1:[{P1},{P2}...],
-    W2:[{P3},{P5}...],
-    W3:[{P6},{p7}...],
+    WBS:{'Part1': 100, 'Part2': 200, 'Part3': 300},
+    WAY:{'Part1': 200, 'Part2': 200, 'Part3': 200},
+    WBR:{'Part1': 300, 'Part2': 100, 'Part3': 200}
 }
 
-output：
-{'WBS': {'ES': 10, 'BWS': 10, 'AS': 10}, 'WAY': {'ES': 20, 'BWS': 20, 'AS': 20}, 'WBR': {'ES': 30, 'BWS': 30, 'AS': 30}}
-
-receive from supplier
-{
-    WBS:{'ES': 10, 'BWS': 10, 'AS': 10}
-    WAY:{'ES': 20, 'BWS': 20, 'AS': 20}
-    WBR:{'ES': 30, 'BWS': 30, 'AS': 30}
-}
-
-receive from supplier
-{
-    WBS:{'Part1': 10, 'Part2': 10, 'Part3': 10}
-    WAY:{'ES': 20, 'BWS': 20, 'AS': 20}
-    WBR:{'ES': 30, 'BWS': 30, 'AS': 30}
-}
-
-WBS:{'Part1': 10, 'Part2': 20, 'Part3': 30, 'Part4': 40, 'Part5': 50}
-WAY:{'Part1': 50, 'Part2': 40, 'Part3': 30, 'Part4': 20, 'Part5': 10}
-WBR:{'Part1': 20, 'Part2': 30, 'Part3': 10, 'Part4': 40, 'Part5': 50}
+Zip Tuple Program output
+Continue to enter next part? 1.Yes 2.No:0
+[('p1', 'ES', 'fang'), ('p2', 'BWS', 'marong'), ('p3', 'AS', 'chen')]

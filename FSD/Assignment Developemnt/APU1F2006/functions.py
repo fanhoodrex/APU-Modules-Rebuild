@@ -47,40 +47,44 @@ def Warehouses_CodeList():
     print(f"Successfully create all warehouses:{list_warehouse}")
     return list_warehouse
 
-def Part():
-    """Function for creating individual part element"""
-    part_details = {} # initialize part variable in local scope
-    warehouse_value = [] # initialize warehouse_value variable in local scope
-    warehouse_value = [] # initialize warehouse_value variable in local scope
-
-    part_details['id'] = input("What is the unique id should be given for this parts?: ") # assign the unique id key/value for part dict
-    part_details['initial_quantity'] = int(input("How many is the initial quantity for this part?:")) # assign the initial quantity key/value for part dict
-    part_details['supplier'] = input("Enter one supplier only for this part:") # assign the supplier key/value for part dict
-    suppliersList.append(part_details["supplier"])
-
-    while True: # while loop for selecting those warehouses with which the each part are supplied 
-        ware_input = input("What warehouses is this part under? Enter 0 to finish:")
-        if ware_input in Warehouses_CodeList"
-            warehouse_value.append(ware_input)
-        else:
-            print("Pls enter valid warehouses:")
+def Part_Creation(Part_ID,sections,suppliers):
+    """function for creating part and its assembly section and suppliers details at once iteration"""
+    while True:
+        P_id = input("What is the unique id for this part?:")
+        Part_ID.append(P_id)
+        Assem_name = input("What assembly section is this part used for:")
+        sections.append(Assem_name)
+        S_detail = input("what suppiler is this part by:")
+        suppliers.append(S_detail)
+        confirm_continue = int(input("Continue to enter next part? 1.Yes 2.No:"))
+        if confirm_continue == 1:
             continue
-            time.sleep(1)
-    part_details['warehouse'] = warehouse_value # assign the warehouse list as value to the warehosue key in part dict
+        else:
+            break
+    return zip(Part_ID,sections,suppliers) # zip the three list into list of tuple
 
-    while True: # while loop for selecting those assembly sections with which the each part are supplied 
-        print(AssemblySections_CodeList)
-        section_input = input("What assambly sections is this part provided to?:")
-        if section_input == str(0):
+def simulate_warehouse(warehouses,Part_ID,total_quantity,warehouse_dict):
+    """void function that simulate at least three warehouses and record at least 5 parts under each of them.
+    access global variable and do calculation on them within this function"""
+    for ware in warehouses: # iterate through warehouses list
+        print(f"This is {ware} warehouse")
+        innerdict = {} # inner dict for warehouses dict's value
+        for part in Part_ID: # iterate through Part_ID list
+            quantity = int(input(f"What is the initial quantity for {part}:"))
+            innerdict[part] = quantity
+            total_quantity[part] += quantity # add up tp total quantity
+        warehouse_dict[ware] = innerdict # append innerdict into warehouse_dict
+    return None
+
+def search(Part_ID,Supplier_Details):
+    while True:
+        id_Search = input("Enter Part's ID for search and 0 for exit:")
+        if id_Search not in Part_ID:
+            print("Sorry, pls enter a valid Part ID")
+        elif id_Search == str(0):
             break
         else:
-            warehouse_value.append(section_input)
-            continue
-            time.sleep(1)
-    part_details['assembly section'] = warehouse_value # assign the assembly sections as value to the assembly section key in part dict
-
-    time.sleep(1)
-    print(f"""Successfully created a single part, shown as below
------------------------------------------------------------------
-    {part_details}""") # use f-string with triple quotation
-    return part_details
+            index = Part_ID.index(id_Search) # access the index number from Part_ID list
+            supplier_name,part_name = Supplier_Details[index][2],Supplier_Details[index][0] # access the suppier detail and part it supplies
+            print(f"{supplier_name} is the supplier {id_Search}")
+    return None        
