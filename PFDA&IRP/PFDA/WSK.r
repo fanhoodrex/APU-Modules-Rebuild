@@ -11,7 +11,7 @@ print(tab_cnt) # inspect the contingency table
 prop.table(tab_cnt)
 ggplot(df_csv,aes(x=origin))+geom_bar() # simple barchart counting on origin field 
 
-# analyse the numerical on single temp (temperature) variable
+# 1.analyze the numerical variable data of temp (temperature) by three types of chart
 ggplot(df_csv,aes(x = temp)) +
   geom_histogram() + # histogram plot 
   facet_wrap(~origin) # faceted by origin variable
@@ -21,5 +21,57 @@ ggplot(df_csv,aes(x = temp)) +
   facet_wrap(~origin) # faceted by origin variable
 
 ggplot(df_csv,aes(x=1,y=temp)) + 
+  geom_boxplot() + # Boxplot
+  facet_wrap(~origin) # faceted by origin variable
+
+# 2.analyze the numerical variable data of dewp (dewpoint) by three types of chart
+ggplot(df_csv,aes(x = dewp)) +
+  geom_histogram() + # histogram plot 
+  facet_wrap(~origin) # faceted by origin variable
+
+ggplot(df_csv,aes(x = dewp)) + 
+  geom_density() + # Density plot
+  facet_wrap(~origin) # faceted by origin variable
+
+ggplot(df_csv,aes(y=dewp)) + 
+  geom_boxplot() + # Boxplot
+  facet_wrap(~origin) # faceted by origin variable
+
+# 3.analyze the numerical variable data of humid (Relative humidity) by three types of chart
+ggplot(df_csv,aes(x = humid)) +
+  geom_histogram() + # histogram plot 
+  facet_wrap(~origin) # faceted by origin variable
+
+ggplot(df_csv,aes(x = humid)) + 
+  geom_density() + # Density plot
+  facet_wrap(~origin) # faceted by origin variable
+
+ggplot(df_csv,aes(y=humid)) + 
+  geom_boxplot() + # Boxplot
+  facet_wrap(~origin) # faceted by origin variable
+
+# 4.analyze the numerical variable data of wind_dir (Wind direction) by three types of chart
+ggplot(df_csv,aes(x = wind_dir)) +
+  geom_histogram() + # histogram plot 
+  facet_wrap(~origin) # faceted by origin variable
+
+ggplot(df_csv,aes(x = wind_dir)) + 
+  geom_density() + # Density plot
+  facet_wrap(~origin) # faceted by origin variable
+
+ggplot(df_csv,aes(y= wind_dir)) + 
+  geom_boxplot() + # Boxplot
+  facet_wrap(~origin) # faceted by origin variable
+
+# 5.analyze the numerical variable data of wind_speed (Wind speed) by three types of chart
+ggplot(df_csv,aes(x = wind_speed)) +
+  geom_histogram() + # histogram plot 
+  facet_wrap(~origin) # faceted by origin variable
+
+ggplot(df_csv,aes(x = wind_speed)) + 
+  geom_density() + # Density plot
+  facet_wrap(~origin) # faceted by origin variable
+
+ggplot(df_csv,aes(y= wind_speed)) + 
   geom_boxplot() + # Boxplot
   facet_wrap(~origin) # faceted by origin variable
