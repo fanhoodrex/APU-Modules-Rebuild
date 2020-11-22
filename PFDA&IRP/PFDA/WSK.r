@@ -1,11 +1,8 @@
 df_csv = read.csv("4. Hourly weather data.csv",
                   header = TRUE) # load csv data into R
 
-View(df_csv) # display the dateset
 str(df_csv) # check the attributes' data types of the dataset
 head(df_csv) # inspecrt the first six of the dataframe loaded 
-
-library(ggplot2) # activate the ggplot2 package
 
 # analyse the categorical data of origin
 summary(df_csv) # summary data on each attribute of dataset
@@ -16,6 +13,8 @@ tab_cnt_year <- table(df_csv$origin,df_csv$year) # contingency table by origin a
 tab_cnt_month <- table(df_csv$origin,df_csv$month) # contingency table by origin and month fields
 prop.table(tab_cnt_year) # inspect the tab_cnt_year in proportion
 prop.table(tab_cnt_month) # inspect the tab_cnt_month in proportion 
+
+library(ggplot2) # activate the ggplot2 package
 ggplot(df_csv, aes(x=month,fill=origin)) + # plot the contingency table 
   geom_histogram() +
   facet_wrap(~origin)
@@ -67,7 +66,7 @@ ggplot(df_csv,aes(y=humid)) +
 
 # 4.analyze the numerical variable data of wind_dir (Wind direction) by three types of chart
 ggplot(df_csv,aes(x = wind_dir)) +
-  geom_histogram() + # histogram plot 
+  geom_histogram() + # histogram plot
 ggplot(df_csv,aes(x = wind_dir)) + 
   geom_density() + # Density plot
 ggplot(df_csv,aes(y= wind_dir)) + 
