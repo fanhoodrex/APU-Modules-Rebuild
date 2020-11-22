@@ -9,13 +9,34 @@ library(ggplot2) # activate the ggplot2 package
 
 # analyse the categorical data of origin
 summary(df_csv) # summary data on each attribute of dataset
+sapply(df_csv, function(x) sum(is.na(x)))# summary all the missing value for each column using the sapply function
 
-tab_cnt <- table(df_csv$origin,df_csv$year) # assign the contingency table between origin and year fields to tab_cnt
-print(tab_cnt) # inspect the contingency table in value
-prop.table(tab_cnt) # inspect the contingency table in proportion 
-ggplot(df_csv,aes(x=origin)) + 
-  geom_bar() + # simple barchart counting on origin field 
+options(scipen = 999, digits = 3) # Simplify display format
+tab_cnt_year <- table(df_csv$origin,df_csv$year) # contingency table by origin and year fields
+tab_cnt_month <- table(df_csv$origin,df_csv$month) # contingency table by origin and month fields
+prop.table(tab_cnt_year) # inspect the tab_cnt_year in proportion
+prop.table(tab_cnt_month) # inspect the tab_cnt_month in proportion 
+ggplot(df_csv, aes(x=month,fill=origin)) + # plot the contingency table 
+  geom_histogram() +
+  facet_wrap(~origin)
 
+# Data manipulation
+# summarize all the missing value for each column using the sapply function
+sapply(df_csv, function(x) sum(is.na(x)))
+
+# Replacing the column by Zero for the all values in dewp Columns
+df_csv[["dewp"]][is.na(df_csv[["dewp"]])] <- 0
+head(df_csv$dewp)
+
+# removing the outlier inside pressure column
+outlier_norm <- function(x){
+  qntile <- quantile(x, probs=c(.25, .75))
+  caps <- quantile(x, probs=c(.05, .95))
+  H <- 1.5 * IQR(x, na.rm = T)
+  x[x < (qntile[1] - H)] <- caps[1]
+  x[x > (qntile[2] + H)] <- caps[2]
+  return(x)
+}
 
 # 1.analyze the numerical variable data of temp (temperature) by three types of chart
 ggplot(df_csv,aes(x = temp)) +
