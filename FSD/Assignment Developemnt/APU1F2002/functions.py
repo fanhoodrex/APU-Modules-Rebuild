@@ -6,6 +6,7 @@ def insert(data):
     f.close()
 
 def record(data):
+    """record data into txt file"""
     f = open('record_data.txt', 'a', newline='')
     writer = csv.writer(f)
     writer.writerow(data)
