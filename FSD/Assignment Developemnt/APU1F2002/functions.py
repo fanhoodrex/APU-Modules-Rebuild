@@ -13,6 +13,7 @@ def record(data):
     f.close()
 
 def search(id):
+    """search patient id from patient_data txt file"""
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     for line in reader:
@@ -23,6 +24,7 @@ def search(id):
     return False
 
 def get_data(id):
+    """ search patient zone & testtimes according to patient id"""
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     for line in reader:
@@ -33,6 +35,7 @@ def get_data(id):
     return 0
 
 def get_rol():
+    
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     length = 0
