@@ -32,7 +32,7 @@ def main():
     f.close()
 
     f = open('confirmed_data.txt', 'w', newline='')
-    writer = csv.writer(f)
+    writer = csv.writer(f)# write.writerow([id, test, zone, group, ward, state, conid,name])
     f.close()
     
     operation = menu() # the numeric selection for menu

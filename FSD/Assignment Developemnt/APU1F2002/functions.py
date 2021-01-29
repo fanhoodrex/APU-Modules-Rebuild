@@ -35,7 +35,7 @@ def get_data(id):
     return 0
 
 def get_rol():
-    
+    """ read data """
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     length = 0
@@ -46,6 +46,7 @@ def get_rol():
     return length
 
 def get_ends(test,end,group):
+    """ insert test_type ,test_result,test_group """
     if test in ['t1','t2']:
         if group in ['ATO','ACC','AEO']:
             if end == '1':
@@ -75,6 +76,7 @@ def get_ends(test,end,group):
                 print('CW')
 
 def findtest(id):
+    """ search for testtimes according to patient id """
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     for line in reader:
@@ -85,6 +87,7 @@ def findtest(id):
     return 0
 
 def findCon(id):
+    """ find confirmed patients id """
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     for line in reader:
@@ -99,12 +102,14 @@ def findCon(id):
     return False
 
 def wConfirmed(data):
+    """insert confirmed patients data into confirmed_data txt file"""
     f = open('confirmed_data.txt', 'a', newline='')
     writer=csv.writer(f)
     writer.writerow(data)
     f.close()
 
 def confirmedId():
+    """ read data """
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     length=0
@@ -114,6 +119,7 @@ def confirmedId():
     return length
 
 def findConId(id):
+    """ find confirmedID from confirmed_data txt file """
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     for line in reader:
@@ -124,6 +130,7 @@ def findConId(id):
     return False
 
 def setState(id,state):
+    """ write the patients status """
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     f1 = open('confirmed_data.txt', 'w', newline='')
@@ -136,6 +143,7 @@ def setState(id,state):
     f1.close()
 
 def getTestName():
+    """ find test patients's id and name """
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     t=True
@@ -148,6 +156,7 @@ def getTestName():
     f.close()
 
 def setinsert(id,test,end):
+    """ insert patients id, test_type, test_result """
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     f1 = open('patient_data.txt', 'w', newline='')
@@ -161,6 +170,7 @@ def setinsert(id,test,end):
     f1.close()
 
 def getTestSum():
+    """ record the sum of test_result """
     f = open('record_data.txt', 'r', newline='')
     reader = csv.reader(f)
     t11=0
@@ -191,6 +201,7 @@ def getTestSum():
     f.close()
 
 def getRestore():
+    """ find the recovered patients'id,zone and group"""
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     t=True
@@ -203,6 +214,7 @@ def getRestore():
     f.close()
 
 def getZoneNum():
+    """ find the number of patients who tested positive for the partition"""
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     a=0
@@ -223,6 +235,7 @@ def getZoneNum():
     f.close()
 
 def getACZoneNum():
+    """  Find the number of active partition cases """
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     a = 0
@@ -243,6 +256,7 @@ def getACZoneNum():
     f.close()
 
 def getdel():
+    """  Find the details of the deceased """
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     t=False
@@ -255,6 +269,7 @@ def getdel():
     f.close()
 
 def findcase(id):
+    """ find confirmed patients' id """
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     for line in reader:
@@ -264,6 +279,7 @@ def findcase(id):
     f.close()
 
 def getname(name):
+    """ find comfirmed patients' name """
     f = open('confirmed_data.txt', 'r', newline='')
     reader = csv.reader(f)
     for line in reader:
@@ -274,6 +290,7 @@ def getname(name):
     f.close()
 
 def findname(id):
+    """ find patient id """
     f = open('patient_data.txt', 'r', newline='')
     reader = csv.reader(f)
     for line in reader:
@@ -284,6 +301,7 @@ def findname(id):
     return 0
 
 def menu():
+    """ function for displaying the menu """
     operation = input('''
         1: insert values 
         2: get ends
@@ -296,6 +314,7 @@ def menu():
     return operation
 
 def menu1():
+    """ function for displaying the menu1 """
     printsum = input('''Please input to query:
         1: The test
         2: Patients receiving inspection
@@ -307,6 +326,7 @@ def menu1():
     return printsum
 
 def menu2():
+    """ function for displaying the menu2 """
     printsum = input('''What to search
         1:what to name
         2:ID to now
