@@ -4,10 +4,6 @@ name_list = []
 subscribers = []
 
 id = 1 # global scope
-def subscriber_dict():
-    """add each subscriber details to dictionary type value"""
-    pass
-
 def Subscription():
     """input for subscriber details and write into txt file"""
     global id
@@ -71,7 +67,7 @@ def Subscription():
         address = input("where is your address?:")
         healthHistory = input("What is your health history?")
         while True: # inner while true loop to validate the claim limit type
-            limit_type = input("What type of claim limit type do u want? Either 'Annual' or 'Lifetime':") # try/except clause might needed to be used in user input 
+            limit_type = input("What type of claim limit do u want? Either 'Annual' or 'Lifetime':") # try/except clause might needed to be used in user input 
             if limit_type == "Annual":
                 print("Subscript to Annual Claim Limit successfully !")
             elif limit_type == "Lifetime":
@@ -121,7 +117,7 @@ def search():
     """The function should have options to search for a subscribers record by name or id: """
     id_name = input("pls enter subscriber's name:")
     if id_name in name_list:
-        print(subscribers[id_name.index(id_name)]) # access the key/value element in dictionary
+        print(subscribers[name_list.index(id_name)]) # access the key/value element in dictionary
     else:
         print("Sorry, the subscriber with this id/name doesn't exist.\n")
         time.sleep(1)
