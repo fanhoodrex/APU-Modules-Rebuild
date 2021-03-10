@@ -1,6 +1,5 @@
 from Functions import *
 
-
 while True:
     print("""
     "Welcome tp MEDILIFE HELATH INSURANCE SCHEME"
