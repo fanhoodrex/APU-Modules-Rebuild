@@ -1,8 +1,4 @@
-import pickle
-
-import os
-
-import pathlib
+import pickle,os,pathlib
 
 Menu = 0
 admin_menu = 0
@@ -24,10 +20,10 @@ def Admin_Menu():
           "                          8: Viewing all transaction of all types Loan \n"
           "                          9: Exit  \n ")
 
-    int(input('Select Your Optional to enjoy the feature: '))
+    int(input('Select your option to enjoy the feature: '))
+    return None
 
-
-if admin_menu == 1:
+if admin_menu == 1: 
     Admin_Login()
 
 
@@ -39,6 +35,7 @@ def New_Customer_Menu():
           "                          4: Exit \n")
 
     int(input('Select Your Optional to enjoy the feature: '))
+    return None
 
 
 def Register_Customer():
@@ -50,6 +47,7 @@ def Register_Customer():
           "                          6: Exit \n")
 
     int(input('Select Your Optional to enjoy the feature: '))
+    return None
 
 
 while Menu < 4:
@@ -67,3 +65,4 @@ while Menu < 4:
         New_Customer_Menu()
     else:
         print('Thank You for using our System\nGood Bye!')
+        break
