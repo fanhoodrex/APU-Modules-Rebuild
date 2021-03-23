@@ -1,9 +1,10 @@
-# Write: Student name
-# Write: Student TP
-
+# Nurfarah Hafina
+# TP062800
+# import some API
 import datetime
 import random
 
+# List define to use them in any functions inside to this project
 Loan_information = []
 Customer_Register = []
 Customer_Login_Approval = []
@@ -23,12 +24,13 @@ EL_Loan_type = []
 CL_Loan_type = []
 HL_Loan_type = []
 PL_Loan_type = []
+
 # List extension
-transactions_of_specific_Customer.extend(pay_Loan)
 transaction_of_all_customer.extend(EL_Loan_type)
 transaction_of_all_customer.extend(CL_Loan_type)
 transaction_of_all_customer.extend(HL_Loan_type)
 transaction_of_all_customer.extend(PL_Loan_type)
+
 
 transaction_of_all_types_Loan.extend(EL_Loan_type)
 transaction_of_all_types_Loan.extend(CL_Loan_type)
@@ -36,9 +38,12 @@ transaction_of_all_types_Loan.extend(HL_Loan_type)
 transaction_of_all_types_Loan.extend(PL_Loan_type)
 
 loan_status = []
+
+# Declaring the Global variables to be use everywhere
 startover = ""
 global payLoanInstalmentAmount,Instalment_Amount,balance,status
 
+# Main function to display to main menu of the project
 def main():
     menu = 0
     while menu<5:
@@ -79,27 +84,29 @@ def main():
         else:
             exit()
 
+# admin login to access the features of the functionalities of this part
 def Admin_Login():
     print('\n******************************* ADMIN LOGIN PAGE *********************************')
     print("\nPlease enter your details to log in")
+
+    username = "admin"
+    password = "admin"
+    
     username = input("Please enter your username: ")
     password = input("Please enter your password: ")
 
-    for line in open("adminLogin.txt","r").readlines():
-        login_info = line.split(";")
-        if username == login_info[0] and password == login_info[1]:
-            print("Welcome!")
-            Admin_Menu()
-        elif username == login_info[0] or password == login_info[1]:
-            print("Invalid Username or Password Input!")
-            Admin_Login()
-        else:
-            print("Username and Password Does Not Exist!")
-            Admin_Login()
+    if username == password:
+        print("Welcome!")
+        Admin_Menu()
+    else:
+        print("Username and Password Does Not Match!")
+        Admin_Login()
 
     print('\n-----------------------------------------------------------------------------------')
 
+# admin menu to show as under menu of main menu to see the see the features of admin menu
 def Admin_Menu():
+    # initialise the variable
     adminMenu = 0
     while adminMenu<9:
         print('\n******************************* ADMIN MAIN MENU PAGE *********************************')
@@ -146,6 +153,7 @@ def Admin_Menu():
         else:
             main()
 
+# viewing customer request function
 def Viewing_Cus_Request():
     print('\n****************************** CUSTOMER REGISTRATION REQUESTS **********************************')
     if len(Customer_Login_Approval) == 0:
@@ -165,6 +173,7 @@ def Viewing_Cus_Request():
     else:
         Admin_Menu()
 
+# Giving approval of customer after seeing customer request function
 def Giving_approval(loginList):
     status = str(input("\n\n\tEnter Yes/No for the above Customer Registration Approvals (Y/N) : "))
 
@@ -187,21 +196,11 @@ def Giving_approval(loginList):
     else :
         Admin_Menu ()
 
-"""
-def Providing_Loan_information():
-    print('\n******************************* PROVIDE LOAN INFORMATION ************************************')
-
-    print('\n---------------------------------------------------------------------------------------------')
-    restart = str(input("Do You Wish to Continue(Y/N): ").lower())
-    if restart == 'y':
-        Admin_Menu()
-    else:
-        main()
-
-"""
-
+# viewing all transactions of specific customer by using their ID
 def viewing_all_transactions_of_specific_customer():
     print ( '\n******************************* VIEWING ALL TRANSACTIONS OF SPECIFIC CUSTOMER ************************************' )
+
+    tr = open('transaction of all customers.txt','a')
 
     print ( "Below will show a list of  all transaction of transactions of specific customer " )
     print ( "It will print the loan type and the transaction Amount" )
@@ -212,11 +211,12 @@ def viewing_all_transactions_of_specific_customer():
         print ( "The ID you enter has no transaction in the System" )
     print ( "\n--------------------------------------------------------------------------------------------------" )
     restart = str ( input ( "Do You Wish to start again(Y/N): " ).lower ( ) )
-    if restart == 'y' :
+    if restart == 'y':
         viewing_all_transactions_of_specific_customer()
     else:
         Admin_Menu()
 
+# viewing all transactions of specific loan type by using their loan type
 def viewing_all_transactions_of_specific_Loan_type():
     print ('\n******************************* VIEWING ALL TRANSACTIONS OF SPECIFIC LOAN TYPE ************************************')
 
@@ -244,12 +244,17 @@ def viewing_all_transactions_of_specific_Loan_type():
     else :
         Admin_Menu()
 
+# viewing all transactions of all customer  by printing all transactions
 def viewing_all_transaction_of_all_customer():
     print ('\n******************************* VIEWING ALL TRANSACTIONS OF ALL CUSTOMER ************************************')
 
+    tr = open('transaction of all customers.txt', 'a')
 
     print("Below will show a list of the all transaction of customers only the numbers")
     print(transaction_of_all_customer)
+    tr.write(str(transaction_of_all_customer))
+    tr.write('\n')
+    tr.close()
 
     print ( "\n--------------------------------------------------------------------------------------------------" )
 
@@ -259,12 +264,16 @@ def viewing_all_transaction_of_all_customer():
     else :
         Admin_Menu ( )
 
+
+# viewing all transactions of all type loan by printing all type loan type
 def viewing_all_transaction_of_all_types_Loan():
     print ('\n******************************* VIEWING ALL TRANSACTIONS OF ALL LOAN TYPE ************************************')
+    tl = open('transaction of all loan type.txt','a')
 
-    print("Below will show a list of the all transaction of all type of loan and the customer ID")
-
-    print(transaction_of_all_types_Loan)
+    print(str(transaction_of_all_types_Loan))
+    tl.write(str(transaction_of_all_types_Loan))
+    tl.write('\n')
+    tl.close()
     print ( "\n--------------------------------------------------------------------------------------------------" )
 
     restart = str ( input ( "Do You Wish to start again(Y/N): " ).lower ( ) )
@@ -273,10 +282,13 @@ def viewing_all_transaction_of_all_types_Loan():
     else :
         Admin_Menu ( )
 
+
 def Exit():
     print("Exit the Program")
 
+# New Customer menu to show the under menu of new customer
 def New_Customer_Menu():
+    # initialise variable
     newCustomerMenu = 0
     while newCustomerMenu <= 4:
         print("\t\t[1] Checking Loan detail  \n\t\t[2] Calculate to check Loan Amount \n\t\t[3] Information "
@@ -291,7 +303,7 @@ def New_Customer_Menu():
         elif newCustomerMenu == 2:
             print(
                 "\t\t[1] Educational Loan Calculator  \n\t\t[2] Home Loan Calculator  \n\t\t[3] Car Loan Calculator  ")
-            print("\t\t\t\t\t\t\t\t[4] Personal Loan Calculator \n")
+            print("\t\t\[4] Personal Loan Calculator \n")
 
             choice = int(input('Select Your Loan Type: '))
             if choice == 1:
@@ -321,6 +333,7 @@ def New_Customer_Menu():
         else:
             main()
 
+# Seeing Loan details
 def view_loan_details():
     print('\n******************************* LOAN DETAILS PAGE *********************************')
     print("\nloan Types We Offer: \n\t\t[1] Educational Loan - interest rate: 2.5%")
@@ -331,10 +344,11 @@ def view_loan_details():
     print('\n------------------------------------------------------------------------------------')
     restart = str(input("Do You Wish to Continue(Y/N): ").lower())
     if restart == 'y':
-        New_Customer_Menu()
+        view_loan_details()
     else:
-        main()
+        New_Customer_Menu()
 
+# Function to calculate loan
 def edu_loan_calculator():
     print('\n******************************* EDUCATIONAL LOAN CALCULATOR ************************************')
 
@@ -347,10 +361,11 @@ def edu_loan_calculator():
     print("\n--------------------------------------------------------------------------------------------------")
     restart = str(input("Do You Wish to Continue(Y/N): ").lower())
     if restart == 'y':
-        New_Customer_Menu()
+        edu_loan_calculator()
     else:
-        main()
+        New_Customer_Menu()
 
+# home loan function calculator
 def home_loan_calculator():
     print('\n******************************* HOME LOAN CALCULATOR ************************************')
 
@@ -370,6 +385,7 @@ def home_loan_calculator():
     else:
         New_Customer_Menu()
 
+# car loan function calculator
 def car_loan_calculator():
     print('\n******************************* CAR LOAN CALCULATOR ************************************')
 
@@ -384,10 +400,11 @@ def car_loan_calculator():
     print("\n--------------------------------------------------------------------------------------------------")
     restart = str(input("Do You Wish to Continue(Y/N): ").lower())
     if restart == 'y' :
-        home_loan_calculator ( )
-    else :
         car_loan_calculator ( )
+    else :
+        New_Customer_Menu ( )
 
+# personal loan function calculator
 def personal_loan_calculator():
     print('\n******************************* PERSONAL LOAN CALCULATOR ************************************')
 
@@ -413,12 +430,16 @@ def choices():
     else:
         raise TypeError
 
+# Customer registration function
 def customer_registration():
     startOver = ""
     print('\n******************************* NEW CUSTOMER REGISTRATION ************************************')
     userID = input("Enter The User ID : ")
-
     print("Your User ID is: "+str(userID))
+    for line in open ( "RegisterDetails.txt", "r+" ).readlines ( ):
+        if userID in Customer_Register :
+            print ( "ID already exist try with another ID!" )
+            customer_registration()
     Customer_Register.append(userID)
     Customer_Login_Approval.append(userID)
     pay_Loan.append(userID)
@@ -426,6 +447,7 @@ def customer_registration():
     transaction_of_all_customer.append(userID)
     return getCredentials()
 
+# customer credential getting
 def getCredentials():
     f2 = open('LoginApproval.txt', "a")
     print("----------------Please fill in the information below to Register-------------------")
@@ -469,6 +491,7 @@ def getCredentials():
         Instalment_Amount = float(input("Enter Your Instalment Amount (RM): "))
         Customer_Register.append(Instalment_Amount)
         pay_Loan.append(Instalment_Amount)
+        loan_status.append(Instalment_Amount)
         f.write(str(Customer_Register))
         f.write('\n')
         f.close()
@@ -491,6 +514,7 @@ def getCredentials():
         else:
             New_Customer_Menu()
 
+# Customer Register Menu
 def Register_Customer():
     newRegisterCustomerMenu = 0
 
@@ -519,16 +543,16 @@ def Register_Customer():
             Register_Customer()
         else:
             main()
-
+# Function to help customer to login to the system
 def loginUser():
     print('\n******************************* CUSTOMER LOGIN PAGE *********************************')
     print("\nPlease enter your details to log in")
     username = input("Please enter your username: ")
     password = input("Please enter your password: ")
 
-    for line in open("Login.txt", "r").readlines():
-        if username in line:
-            if password in line:
+    for line in open("RegisterDetails.txt", "r").readlines():
+        if username in Register_Customer():
+            if password in Register_Customer():
                 print("Welcome!")
                 Register_Customer()
         else:
@@ -537,14 +561,20 @@ def loginUser():
 
     print('\n-----------------------------------------------------------------------------------')
 
+# Providing loan information for the customer
 def Provide_Loan_information():
+
     print('\n******************************* PROVIDE LOAN INFORMATION ************************************')
     f = open('Loan Information.txt',"a")
 
     print("--------Registration Information Part----------")
     loan_id = input("Enter the loan ID here: ")
-
     print("Your Loan ID is: "+str(loan_id))
+    for line in open ( "Loan Information.txt", "r" ).readlines ( ):
+        if loan_id in Loan_Details :
+            print ( "ID already exist try with another ID!" )
+            Provide_Loan_information ( )
+
     Loan_information.append(loan_id)
     Loan_Details.append(loan_id)
     instalment_Date = input("Enter Instalment Date: ")
@@ -556,8 +586,8 @@ def Provide_Loan_information():
     print("The information below is printed in list as: "+str(Loan_information))
     print("The list below will add more information about the customer Register")
     Customer_Register.extend(Loan_information)
-    print(Customer_Register)
-    f.write(str(Customer_Register)+"\n")
+    print(Loan_Details)
+    f.write(str(Loan_Details)+"\n")
     f.write('\n')
     f.close()
 
@@ -568,6 +598,7 @@ def Provide_Loan_information():
     else:
         Admin_Menu()
 
+# TO check loan details
 def checking_Loan_details():
     print('\n******************************* CHECK LOAN DETAILS ************************************')
     Check_Loan = input("Enter ID of loan here to se the Loan details: ")
@@ -583,6 +614,7 @@ def checking_Loan_details():
     else:
         Register_Customer()
 
+# Function that will the customer to pay loan
 def Pay_Loan_Instalment():
     print('\n******************************* PAY LOAN INSTALLMENT ************************************')
     Auth = input("Enter your ID here to see your loan instalment: ")
@@ -597,6 +629,7 @@ def Pay_Loan_Instalment():
         view_Own_Transaction.append(x_date)
         loan_status.append(payLoanInstalmentAmount)
         pay_Loan.append(payLoanInstalmentAmount)
+        transactions_of_specific_Customer.append(payLoanInstalmentAmount)
         transaction_of_all_customer.append(payLoanInstalmentAmount)
         transaction_of_all_types_Loan.append(payLoanInstalmentAmount)
         EL_Loan_type.append(payLoanInstalmentAmount)
@@ -614,6 +647,7 @@ def Pay_Loan_Instalment():
     else:
         Register_Customer()
 
+# Function to display customer transaction
 def view_own_Transactions():
     print('\n******************************* VIEW OWN TRANSACTION ************************************')
     print("----Showing Own Transaction-----")
@@ -630,6 +664,7 @@ def view_own_Transactions():
     else:
         Register_Customer()
 
+# function to show the status of customer loan
 def checking_loan_status():
     print('\n******************************* CHECK LOAN STATUS ************************************')
     print("The List below show the Instalment Amount and Instalment paid before ")
