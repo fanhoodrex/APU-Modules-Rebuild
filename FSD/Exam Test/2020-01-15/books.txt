@@ -1,7 +1,0 @@
-java 3
-python 4
-go 2
-c+ 3
-html 5
-django 2
-swift 2

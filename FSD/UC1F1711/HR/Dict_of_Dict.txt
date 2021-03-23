@@ -1,0 +1,9 @@
+{'fang': {'role': '1', 'age': '1', 'gender': '1', 'teaching subject': '1', 'enrollment date': '1', 'login_id': '1', 'Password': '1'}, 'chen': {'role': '2', 'age': '2', 'gender': '2', 'teaching subject': '2', 'enrollment date': '2', 'login_id': '2', 'Password': '2'}}
+
+Profile list
+
+1. fang:{'role': '1', 'age': '1', 'gender': '1', 'teaching subject': '1', 'enrollment date': '1', 'login_id': '1', 'Password': '1'}
+
+1. chen:{'role': '2', 'age': '2', 'gender': '2', 'teaching subject': '2', 'enrollment date': '2', 'login_id': '2', 'Password': '2'}
+
+

@@ -1,0 +1,44 @@
+
+function check_in(student, apartmenttype,room type)
+    if has available room and student has not checked in
+        student.checkin = True
+        mark room has been saled
+
+        payed = (room.monthly_rental + (room.internet_monthly_fee if stu.internet else 0)) * month
+        total += payed + 100 + 100
+        total_without_deposit += payed + 100
+
+function checkout(student, month)
+    find room by student
+    total_amount -= 100
+    if student.checkin:
+        c = month * (room.monthly_rental + (room.internet_monthly_fee if stu.internet else 0))
+        if c < stu.actualpayed:
+            return money to student
+        elif c > stu.actualpayed:
+            ask student to pay money
+        return deposit to student
+
+function read_students(filepath)
+    open file
+    foreach line in file:
+        split by ,
+        get tp and name
+        create a new student
+        add it to result list
+
+
+function read_apartments(filepath)
+    open file
+    foreach line in file:
+        split by ,
+        get apartment_type and room count
+        create a new apartment
+        read next room_count lines
+        foreach line
+            split by ,
+            get room_type, price, kitchen, laundry, internetfee, tp
+            create a new room
+            add to apartment
+        add apartment to result
+
