@@ -209,9 +209,8 @@ min(m1)
 # ====================== Answer ==========================
 m1 = matrix(1:8, 2, 4)
 m1
-# wrong one : which(max,arr.ind=FALSE,m1=TRUE)      #不会
-#right answer
-which(m1==max(m1),arr.ind=TRUE) 
+
+which(m1==max(m1),arr.ind=TRUE)  # find the max number location
 # ~~~~~~~~~~~~~~~~~~~~~~ Output ~~~~~~~~~~~~~~~~~~~~~~
 #      row col
 # [1,]   2   4
