@@ -6,4 +6,3 @@ mayun1 china_hangzhou 8888-8888 man 10002 666666 Saving 993000.000000
 geeksforgeeks. (n.d.). C Programming Language. Retrieved from geeksforgeeks: https://www.geeksforgeeks.org/c-programming-language/
 TutorialPoint. (n.d.). C - Arrays. Retrieved from TutorialsPoint: https://www.tutorialspoint.com/cprogramming/c_arrays.htm
 Tutorialpoint. (n.d.). C - Structures. Retrieved from Tutorialspoint: https://www.tutorialspoint.com/cprogramming/c_structures.html
-

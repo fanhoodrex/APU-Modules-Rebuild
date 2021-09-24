@@ -383,9 +383,6 @@ int colculateFee(int index){
     return fee;
 }
 
-/**
- * 
- */
 int bookCourse(){
     printf("1.Exist customer\n");
     printf("2.New customer\n");
@@ -440,9 +437,6 @@ int bookCourse(){
     return ok;
 }
 
-/**
- * 
- */
 void cancelCourse(){
     printf("Customer list:\n");
     for(int i=0; i<customer_num; i++){
@@ -530,9 +524,7 @@ void changeCourse(){
     printf("Change successfully.\n");
 } 
 
-/**
- * Make the date schedule
- */
+/* Make the date schedule */
 void dateSchedule(){
     printCourse();
     int choice, m, d;
@@ -560,9 +552,7 @@ void dateSchedule(){
     return;
 }
 
-/**
- * The menu function 
- */
+/* The menu function */
 int menu(){
     // print the menu.
     printf("-------------------------------------\n");
