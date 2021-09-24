@@ -1,6 +1,4 @@
-
 package cpp.assignment;
-
 
 public class Cupboard {
     
@@ -82,9 +80,6 @@ public class Cupboard {
 		await();
                 
 	}
-	
-	
-        
         // Gets the Glasses from the CupBoard
         public int getGlass() {   
 		return (int)glasses;

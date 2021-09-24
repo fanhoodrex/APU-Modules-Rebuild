@@ -1,6 +1,4 @@
-
 package cpp.assignment;
-
 
 public class Clock extends Thread {
     

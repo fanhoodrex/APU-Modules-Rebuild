@@ -1,4 +1,3 @@
-
 package cpp.assignment;
 
 import java.util.Date;
@@ -54,9 +53,3 @@ public class Customer implements Runnable{
         cafe.add(this);
     }
 }
-
-
- // if(this.getDrink() == 1)
-	        	//this.cafe.get_table_for_cup().put_cup(this);
-	       // else
-	        	//this.cafe.get_table_for_glass().put_glass(this);

@@ -1,6 +1,4 @@
-
 package cpp.assignment;
-
 
 public class Landlord  implements Runnable {
     
@@ -48,6 +46,5 @@ public class Landlord  implements Runnable {
     { 
         lastOrders = true;
             System.out.println("Landlord : We are about to close \n Landlord: Last Orders Please ........");
-    }
-    
+    }   
 }

@@ -1,13 +1,10 @@
-
 package cpp.assignment;
-
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class TablesManager {
-    
-        private int numTables;
+    private int numTables;
 	private int numTakenTables;
 	private Table[] TablesArray;
 	private Lock lock = new ReentrantLock();
