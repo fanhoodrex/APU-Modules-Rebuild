@@ -1,6 +1,3 @@
-#MAMADOU OURY DIALLO
-#TP053554
-
 # the code down will install the all packages 
 # and the librabry in R
 install.packages("UsingR")
