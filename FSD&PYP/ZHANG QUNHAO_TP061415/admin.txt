@@ -1,2 +1,0 @@
-username: Mike
-password: 123456
