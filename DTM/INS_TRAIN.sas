@@ -9,9 +9,6 @@ RUN;
 PROC CONTENTS DATA=WORK.INS_TRAIN; 
 RUN;
 
-
-
-
 proc means data=WORK.INS_TRAIN min max n std mean median skewness;
 	var Id Age Default Balance HHInsurance CarLoan LastContactDay NoOfContacts 
 		DaysPassed PrevAttempts;
@@ -22,25 +19,16 @@ proc means data=WORK.INS_TRAIN VAR p5 p25 p50 p75 p95;
 		DaysPassed PrevAttempts;
 run; 
 
-
-
-
 proc freq data=WORK.INS_TRAIN;
 	tables Job Marital Education Communication LastContactMonth Outcome Carloan 
 		Default CarInsurance HHInsurance ;
 run;
-
-
-
 
 proc means data=WORK.INS_TRAIN nmiss;
 format Id Age Default Balance HHInsurance CarLoan LastContactDay NoOfContacts 
 		DaysPassed PrevAttempts _nmissprint.;
 		run;
 		
-
-
-
 proc format;
 	value _nmissprint low-high="Non-missing";
 	value $_cmissprint " "=" " other="Non-missing";
@@ -58,9 +46,6 @@ proc freq data=WORK.INS_TRAIN;
 		LastContactDay NoOfContacts DaysPassed PrevAttempts / missing nocum;
 run;
 
-
-
-
 ods graphics / reset width=6.4in height=4.8in imagemap;
 
 proc sgplot data=WORK.INS_TRAIN;
@@ -69,9 +54,6 @@ proc sgplot data=WORK.INS_TRAIN;
 run;
 
 ods graphics / reset;
-
-
-
 
 ods graphics / reset width=6.4in height=4.8in imagemap;
 
@@ -82,15 +64,9 @@ run;
 
 ods graphics / reset;
 
-
-
-
 PROC FREQ DATA=WORK.INS_TRAIN;
 TABLE Age;
 RUN;
-
-
-
 
 data WORK.INS_TRAIN;
 set WORK.INS_TRAIN;
@@ -113,9 +89,6 @@ if Age >= 91 and Age <= 95 then Age_Bin = 93;
 if Age >= 96 and Age <= 100 then Age_Bin = 98;
 run;
 
-
-
-
 ods graphics / reset width=6.4in height=4.8in imagemap;
 
 proc sgplot data=WORK.INS_TRAIN;
@@ -125,25 +98,16 @@ run;
 
 ods graphics / reset;
 
-
-
-
 proc sql;
 select Count(*) as Neagtive_Values_Balance 
 from WORK.INS_TRAIN
 where Balance < 0;
 quit;
 
-
-
-
 data WORK.INS_TRAIN;
   set WORK.INS_TRAIN;
   if Balance<0 then call missing(of Balance);
 run;
-
-
-
 
 ods noproctitle;
 proc format;
@@ -156,12 +120,6 @@ proc freq data=WORK.INS_TRAIN;
 	tables Balance / missing nocum;
 run;
 
-
-
-
 proc stdize data=WORK.INS_TRAIN reponly missing=mean out=WORK.INS_TRAIN;
 var Balance;
 run;
-
-
-

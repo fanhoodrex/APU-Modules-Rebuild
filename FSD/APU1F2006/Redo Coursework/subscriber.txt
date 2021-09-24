@@ -1,7 +1,0 @@
-The subscriber's id is 1
-The subscriber's name is Fang
-subscriber's age is 23The subscriber's contact number is 123
-The subscriber's address is 321
-The subscriber's health history is 123
-subscriber's claim limit type is Annual
-
