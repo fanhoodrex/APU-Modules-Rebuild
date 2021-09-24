@@ -13,21 +13,17 @@ library(plotrix)
 library(caret)
 library(tidyverse)
 
-
 # Set Working Directory
 setwd("D:/APU_Courses/2nd Semester/Applied Machine Learning (CT046-3-M-AML)/Assignment")
 
-
 # Dataset importing
 atp = read.csv('Tennis_Dataset.csv')
-
 
 # Data Exploration and Summary Generation
 #create_report(atp)
 print(summary(atp))
 str(atp)
 names(atp)
-
 
 # Extract year from Date 
 atp$year = str_sub(as.character(atp$Date), start= -4)
@@ -378,7 +374,3 @@ names(atp_SMOTE[y])
 
 atp_SMOTE_FCBF = select (atp_SMOTE ,-c(L5,Wsets,Lsets,year,Tourney_index,Wsets_r,
                                        Lsets_r,Wgame_diff,Lgame_diff))
-
-
-# ////////////////////////////////////////////////////////
-

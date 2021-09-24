@@ -1,4 +1,3 @@
-
 /* Macro for data details */
 %macro contents_of(ABC);
 	proc contents data=&ABC order=varnum;
