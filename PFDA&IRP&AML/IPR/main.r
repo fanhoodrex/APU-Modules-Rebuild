@@ -1,5 +1,4 @@
 #loading library
-
 library(MASS)
 library(tidyverse)
 library(caret)
@@ -15,10 +14,8 @@ library(glmnet)
 library(dplyr)
 install.packages("gridExtra")
 install.packages("magrittr") # package installations are only needed the first time you use it
-
 library(magrittr) # needs to be run every time you start R and want to use %>%
 library(dplyr)
-
 library(tidyverse)
 library(mice)
 library(caret)
@@ -29,7 +26,6 @@ library(glmnet)
 library(xgboost)
 
 #Readilibrary(glmnet)ng data
-
 getwd() #gets working dire  ctory
 cars_data <- read.csv("ThreeCars2017.csv", TRUE, ",")
 class(cars_data)
@@ -60,7 +56,6 @@ md.pattern(cars_data, rotate.names=FALSE)
 
 
 #EXPLORATION
-
 #price
 cars_data %>% ggplot()+geom_histogram(aes(Price, ..density..), bins=50)+geom_density(aes(Price))
 

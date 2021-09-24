@@ -28,7 +28,6 @@ library(readr)
 library(corrplot)
 
 # Data Exploration
-
 str(heart)
 summary(heart)
 
@@ -207,10 +206,8 @@ heart$slope <- (heart$slope - min(heart$slope))/(max(heart$slope) - min(heart$sl
 heart$ca <- (heart$ca - min(heart$ca))/(max(heart$ca) - min(heart$ca))
 heart$thal <- (heart$thal - min(heart$thal))/(max(heart$thal) - min(heart$thal))
 
-
 # Partition Of the Data.
 glimpse(heart)
-
 
 set.seed(222)
 
@@ -227,7 +224,6 @@ for (i in c(1:10))
                   linear.output = FALSE,
                   likelihood = TRUE,
                   threshold = 0.2)
-  
   # Plot
   #plot(ni)
   
