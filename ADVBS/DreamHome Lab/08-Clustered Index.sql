@@ -2,7 +2,6 @@
 --1. Create a Test database.
 CREATE DATABASE TestDB
 
-
 USE TestDB
 GO
 

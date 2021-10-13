@@ -1,72 +1,77 @@
 CREATE DATABASE DreamHome;
 GO
-
 USE DreamHome;
 GO
 
-CREATE TABLE Branch
-(branchNo VARCHAR(4) PRIMARY KEY,
-street VARCHAR(50),
-city VARCHAR(50),
-postcode VARCHAR(50));
+CREATE TABLE Branch(
+	branchNo VARCHAR(4) PRIMARY KEY,
+	street VARCHAR(50),
+	city VARCHAR(50),
+	postcode VARCHAR(50)
+);
 GO
 
-CREATE TABLE Client
-(clientNo VARCHAR(4) PRIMARY KEY,
-fname VARCHAR(50),
-lname VARCHAR(50),
-telno VARCHAR(50),
-preftype VARCHAR(50),
-maxrent INT);
+CREATE TABLE Client(
+	clientNo VARCHAR(4) PRIMARY KEY,
+	fname VARCHAR(50),
+	lname VARCHAR(50),
+	telno VARCHAR(50),
+	preftype VARCHAR(50),
+	maxrent INT
+);
 GO
 
-CREATE TABLE PrivateOwner
-(ownerNo VARCHAR(4) PRIMARY KEY,
-fname VARCHAR(50),
-lname VARCHAR(50),
-address VARCHAR(50),
-telno VARCHAR(50));
+CREATE TABLE PrivateOwner(
+	ownerNo VARCHAR(4) PRIMARY KEY,
+	fname VARCHAR(50),
+	lname VARCHAR(50),
+	address VARCHAR(50),
+	telno VARCHAR(50)
+);
 GO
 
-CREATE TABLE Staff
-(staffNo VARCHAR(4) PRIMARY KEY,
-fname VARCHAR(50),
-lname VARCHAR(50),
-position VARCHAR(50),
-gender VARCHAR(1),
-dob DATE,
-salary INT,
-branchNo VARCHAR(4) REFERENCES Branch(branchNo));
+CREATE TABLE Staff(
+	staffNo VARCHAR(4) PRIMARY KEY,
+	fname VARCHAR(50),
+	lname VARCHAR(50),
+	position VARCHAR(50),
+	gender VARCHAR(1),
+	dob DATE,
+	salary INT,
+	branchNo VARCHAR(4) REFERENCES Branch(branchNo)
+);
 GO
 
-CREATE TABLE PropertyForRent
-(propertyNo VARCHAR(4) PRIMARY KEY,
-street VARCHAR(50),
-city VARCHAR(50),
-postcode VARCHAR(50),
-type VARCHAR(50),
-rooms INT,
-rent INT,
-ownerNo VARCHAR(4) REFERENCES PrivateOwner(ownerNo),
-staffNo VARCHAR(4) REFERENCES Staff(staffNo),
-branchNo VARCHAR(4) REFERENCES Branch(branchNo) );
+CREATE TABLE PropertyForRent(
+	propertyNo VARCHAR(4) PRIMARY KEY,
+	street VARCHAR(50),
+	city VARCHAR(50),
+	postcode VARCHAR(50),
+	type VARCHAR(50),
+	rooms INT,
+	rent INT,
+	ownerNo VARCHAR(4) REFERENCES PrivateOwner(ownerNo),
+	staffNo VARCHAR(4) REFERENCES Staff(staffNo),
+	branchNo VARCHAR(4) REFERENCES Branch(branchNo)
+);
 GO
 
-CREATE TABLE Registration
-(clientNo VARCHAR(4) REFERENCES Client(clientNo),
-branchNo VARCHAR(4) REFERENCES Branch(branchNo),
-staffNo VARCHAR(4) REFERENCES Staff(staffNo),
-datejoined DATE,
-PRIMARY KEY (clientNo, branchNo));
+CREATE TABLE Registration(
+	clientNo VARCHAR(4) REFERENCES Client(clientNo),
+	branchNo VARCHAR(4) REFERENCES Branch(branchNo),
+	staffNo VARCHAR(4) REFERENCES Staff(staffNo),
+	datejoined DATE,
+	PRIMARY KEY (clientNo, branchNo)
+);
 GO
 
-   
-CREATE TABLE Viewing
-(clientNo VARCHAR(4)REFERENCES Client(clientNo),
-propertyNo VARCHAR(4) REFERENCES PropertyForRent(propertyNo),
-viewdate DATE,
-comment VARCHAR(50),
-PRIMARY KEY (clientNo, propertyNo));
+CREATE TABLE Viewing(
+	clientNo VARCHAR(4)REFERENCES Client(clientNo),
+	propertyNo VARCHAR(4) REFERENCES PropertyForRent(propertyNo),
+	viewdate DATE,
+	comment VARCHAR(50),
+	PRIMARY KEY (clientNo, propertyNo)
+);
 GO
 
 --Add data into tables.
@@ -110,8 +115,6 @@ INSERT INTO Registration VALUES ('CR62', 'B007', 'SA9', '2003-03-07');
 INSERT INTO Registration VALUES ('CR74', 'B003', 'SG37', '2002-11-16');
 INSERT INTO Registration VALUES ('CR76', 'B005', 'SL41', '2004-01-02');
 GO
-
-
 
 INSERT INTO Viewing VALUES ('CR56', 'PA14', '2004-05-24', 'Too small');
 INSERT INTO Viewing VALUES ('CR56', 'PG16', '2004-05-14', NULL);

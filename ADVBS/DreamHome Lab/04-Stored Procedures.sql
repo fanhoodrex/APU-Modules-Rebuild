@@ -42,9 +42,7 @@ WHERE fname = @fname1;
 -- execute proc SPstaff_name
 EXEC SPstaff_name 'mary'
 
--- Create procedure with 2 parameters
--- position and salary
-
+-- Create procedure with 2 parameters, position and salary
 CREATE PROC SPstaff_Pos_Sal 
 @pos varchar(20), @sal  int
 AS
