@@ -13,6 +13,7 @@
 	7.5 RIGHT JOIN EXCLUDING INNER JOIN
 	7.6 OUTER JOIN EXCLUDING INNER JOIN
 */
+
 -- Cross Join 'cartesian product'
 SELECT Branch.branchNo, branch.city, Staff.Staffno, Staff.fname
 FROM Branch CROSS JOIN Staff
@@ -55,7 +56,6 @@ WHERE b.City = p.City;
 SELECT b.branchNo, b.city, p.PropertyNo, p.city
 FROM Branch b LEFT JOIN PropertyForRent p
 ON b.City = p.City
-
 
 -- Right Outer Join
 SELECT b.branchNo, b.city, p.PropertyNo, p.city
