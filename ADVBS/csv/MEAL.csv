@@ -1,0 +1,16 @@
+﻿Meal_ID,Airline,Option,Type
+m01,AXM,Combo01,non-vegetarian
+m02,AXM,Combo02,vegetarian
+m03,MAS,Combo03,non-vegetarian
+m04,MAS,Combo04,non-vegetarian
+m05,MAS,Combo05,vegetarian
+m06,MAS,Combo06,vegetarian
+m07,CAL,Combo07,vegetarian
+m08,CAL,Combo08,vegetarian
+m09,CAL,Combo09,non-vegetarian
+m10,CAL,Combo10,non-vegetarian
+m11,SIA,Combo11,vegetarian
+m12,SIA,Combo12,non-vegetarian
+m13,SIA,Combo13,vegetarian
+m14,SIA,Combo14,vegetarian
+m15,SIA,Combo15,non-vegetarian

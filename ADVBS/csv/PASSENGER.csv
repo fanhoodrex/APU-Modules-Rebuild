@@ -1,0 +1,21 @@
+﻿Passenger_ID,Number,Name,Gender,Passport,DOB,Age_Catogary
+p01,pn01,Fang,Male,CN0000,2020,fa1
+p02,pn02,SOONG,Male,MY0000,2020,fa1
+p03,pn03,ADRIAN,Female,MY0001,2019,fa2
+p04,pn04,Chan CH,Male,SG001,2015,fa2
+p05,pn05,John W,Male,AUS000,2012,fa2
+p06,pn06,Marry D,Female,SG002,2009,fa3
+p07,pn07,Elizibeth G,Female,ENG111,2006,fa3
+p08,pn08,Sherlock H,Male,ENG119,2005,fa3
+p09,pn09,Watson J,Female,UK171,2004,fa3
+p10,pn10,Clark K,Male,US111,2001,fa4
+p11,pn11,Bruce W,Male,US555,1996,fa4
+p12,pn12,Chai JW,Male,MY691,1991,fa4
+p13,pn13,Wendy C,Female,SG123,1983,fa4
+p14,pn14,Owen W,Male,MY567,1980,fa4
+p15,pn15,Mark T,Male,NZ119,1971,fa4
+p16,pn16,Naomi C,Female,AUS124,1962,fa4
+p17,pn17,Jay H,Female,NZ120,1957,fa4
+p18,pn18,Robin VP,Female,NTH130,1956,fa5
+p19,pn19,Arjen R,Female,NTH198,1951,fa5
+p20,pn20,George R,Male,UK471,1946,fa5
