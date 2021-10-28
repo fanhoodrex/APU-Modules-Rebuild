@@ -1,0 +1,6 @@
+﻿FARE_ID,Category,Age,Fare_Price
+fa1,Infant ,≤ 2,100
+fa2,Child ,2 - 11,200
+fa3,Youth ,12 - 17,300
+fa4,Adult ,18 - 64,500
+fa5,Senior ,≥ 65,400
