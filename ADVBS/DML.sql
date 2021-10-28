@@ -18,6 +18,10 @@ ALTER TABLE FLIGHT
 ADD FOREIGN KEY (Destination) REFERENCES AIRPORT(Code); -- Link FLIGHT to AIRPORT on [Destination]
 ALTER TABLE FLIGHT 
 ADD FOREIGN KEY (Aircraft) REFERENCES AIRCRAFT(Code); -- Link FLIGHT to AIRPORT on [Aircraft]
+ALTER TABLE FLIGHT
+ADD CONSTRAINT CK_Status CHECK ([Status] in ('Delayed','Check-in','In Progress'));
+ALTER TABLE FLIGHT
+ADD CONSTRAINT CK_Type CHECK ([Status] in ('Multi-city','Round-trip','One-way'));
 
 -- TICKET
 ALTER TABLE TICKET
@@ -38,13 +42,15 @@ ADD FOREIGN KEY (Catogary) REFERENCES CATEGORY(Category_ID); -- Link PASSENGER t
 -- MEAL
 ALTER TABLE MEAL
 ADD FOREIGN KEY (Airline) REFERENCES AIRLINE(Code); -- Link MEAL to AIRLINE on [AIRLINE.Code]
-
-
+ALTER TABLE MEAL
+DROP CONSTRAINT CK_Status;
+ALTER TABLE MEAL
+ADD CONSTRAINT CK_Type CHECK ([Type] in ('non-vegetarian','vegetarian'));
 
 -- Member 1 DML Query (FANG)
 -- i. Shows direct flights only for given dates, source & destination.
 SELECT * FROM FLIGHT
-WHERE Date = '2021-11-01' and Source = 'KUL' and Destination = 'SIN';
+WHERE Date = '2021-10-27' and Source = 'KUL' and Destination = 'SIN';
 
 -- ii-1. shows aircraft code, class code, and expected revenue for each class code, 
 SELECT AIRCRAFT.Code AS aircraft_code, CLASS.Code AS class_code, SUM(Value) AS expected_revenue
@@ -94,7 +100,7 @@ INNER JOIN AIRCRAFT
 ON FLIGHT.Aircraft = AIRCRAFT.Code
 INNER JOIN AIRLINE
 ON AIRCRAFT.Airline = AIRLINE.Code
-WHERE Source = 'KUL' and Destination = 'SIN' and Date BETWEEN '2021-11-01' AND '2021-11-03'
+WHERE Source = 'KUL' and Destination = 'SIN' and Date BETWEEN '2021-10-27' AND '2021-10-28'
 GROUP BY AIRLINE.Name
 ORDER BY Frequency DESC;
 
@@ -111,7 +117,7 @@ INNER JOIN AIRCRAFT
 ON FLIGHT.Aircraft = AIRCRAFT.Code
 INNER JOIN AIRLINE
 ON AIRCRAFT.Airline = AIRLINE.Code
-WHERE FLIGHT.Flight_ID = 'f01' and AIRLINE.Code = 'AXM' and Date = '2021-11-01'
+WHERE FLIGHT.Flight_ID = 'f01' and AIRLINE.Code = 'AXM' and Date = '2021-10-27'
 GROUP BY CATEGORY.Category
 
 -- vi. Shows the airline name offering maximum number of journey routes along with names of source and destination.
@@ -123,6 +129,13 @@ INNER JOIN AIRLINE
 ON AIRCRAFT.Airline = AIRLINE.Code
 WHERE Source = 'KUL' and Destination = 'SIN'
 GROUP BY AIRLINE.Name
+
+-- vii Create a query useful for Business
+SELECT [Name], (2021 - DOB) AS Age, SUM([Value]) AS Total_value
+FROM PASSENGER
+INNER JOIN TICKET
+ON PASSENGER.Passenger_ID = TICKET.Passenger_ID
+GROUP BY [Name], (2021 - DOB)
 
 -- Member 2 DML Query (ADRIAN)
 -- viii. Displays flight details, such as, the aircraft code, regular fare, and discounted fare for the first class. 
@@ -155,7 +168,7 @@ INNER JOIN AIRLINE
 ON AIRCRAFT.Airline = AIRLINE.Code
 INNER JOIN MEAL
 ON AIRLINE.Code = MEAL.Airline
-WHERE Type = 'non-vegetarian'
+Where [Type] = 'non-vegetarian'
 ORDER BY Flight_ID;
 
 -- xi. Create a query which shows the names of countries to which TSI provides flight reservations. Ensure that duplicate  country names are eliminated from the list.
@@ -173,7 +186,7 @@ INNER JOIN AIRCRAFT
 ON FLIGHT.Aircraft = AIRCRAFT.Code
 INNER JOIN AIRLINE
 ON AIRCRAFT.Airline = Airline.Code
-WHERE Date = '2021-11-1'
+WHERE Date = '2021-10-27'
 GROUP BY Name, Date, Source, Destination
 
 -- xiii. Shows the names of the meal options available on the given airline.
@@ -182,6 +195,13 @@ FROM MEAL
 INNER JOIN AIRLINE
 ON MEAL.Airline = AIRLINE.Code
 WHERE Airline = 'AXM'
+
+-- xxi Create a query useful for Business
+SELECT MEAL.Meal_ID, MEAL.Airline, MEAL.[Option], MEAL.[Type], TICKET.Total_Orders
+FROM MEAL
+INNER JOIN (SELECT TICKET.Meal, COUNT(*) AS Total_Orders FROM TICKET GROUP BY TICKET.Meal) TICKET
+ON TICKET.Meal = MEAL.Meal_ID
+WHERE MEAL.Airline = 'MAS';
 
 -- Member 3 DML Query (SOONG CHUK MING)
 -- xv. Shows the minimum, maximum, and average journey hours for flights to given city code. Display column headings as, Minimum duration, Maximum duration, and Average duration respectively.
@@ -226,10 +246,10 @@ INNER JOIN AIRCRAFT
 ON FLIGHT.Aircraft = AIRCRAFT.Code
 INNER JOIN AIRLINE
 ON AIRCRAFT.Airline = AIRLINE.Code
-WHERE AIRLINE.Code= 'AXM' AND [Date] = '2021-11-1';
+WHERE AIRLINE.Code= 'AXM' AND [Date] = '2021-10-28';
 
 --xix. for each airline, total number of unaccompanied children travelling in a given date.
-SELECT AIRLINE.Code, AIRLINE.[Name], COUNT(*) as total_number_of_unaccompanied_children
+SELECT AIRLINE.Code, AIRLINE.[Name], COUNT(*) as Total_Number_of_Unaccompanied_Children
 FROM PASSENGER
 INNER JOIN CATEGORY
 ON PASSENGER.Category = CATEGORY.Category_ID
@@ -243,7 +263,7 @@ INNER JOIN AIRCRAFT
 ON FLIGHT.Aircraft = AIRCRAFT.Code
 INNER JOIN AIRLINE
 ON AIRCRAFT.Airline = AIRLINE.Code
-WHERE [Date] = '2021-11-01' AND Service_ID = 's2'
+WHERE [Date] = '2021-10-28' AND Service_ID = 's2'
 GROUP BY AIRLINE.Code, AIRLINE.[Name];
 
 --xx. Shows the details of passengers who have availed any extra, services for a given flight on specified date.
@@ -261,4 +281,10 @@ INNER JOIN AIRCRAFT
 ON FLIGHT.Aircraft = AIRCRAFT.Code
 INNER JOIN AIRLINE
 ON AIRCRAFT.Airline = AIRLINE.Code
-WHERE AIRLINE.Code = 'AXM' AND [Date] = '2021-11-01';
+WHERE AIRLINE.Code = 'AXM' AND [Date] = '2021-10-28';
+
+--xxi Create own query for Business Purpose
+SELECT SERVICE.Service_ID, SERVICE.[Description], TICKET.Total_Service
+FROM SERVICE 
+INNER JOIN (SELECT TICKET.Service,COUNT(*)AS Total_Service FROM TICKET GROUP BY [Service]) TICKET
+ON SERVICE.Service_ID = TICKET.Service
