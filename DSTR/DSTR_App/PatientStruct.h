@@ -41,6 +41,7 @@ Patient::Patient(int patientId, string fullName, int patientAge, string gender, 
 	this->sicknessDescription = sicknessDescription;
 	this->isDisable = isDisable;
 	this->medicineInformation = medicineInformation;
+	this->doctorName = "-";
 }
 
 Patient::Patient() {
