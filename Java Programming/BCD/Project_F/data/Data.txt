@@ -1,0 +1,13 @@
+Student name, University name, Student ID, Identity card, Home address, Phone number, Certificate No, Certificate name, Certificate issuance date
+Juwita bin Seri+APU+AP039569+980516-09-7806+No.45 Kampung Kubang Sepat 06150 Alor Setar Kedah Alor Setar Kedah 06150 Malaysia+016-65699356+AWS+2019+ZSBH0001
+Sayang bin Kembang+APU+AP045702+960213-16-7375+Lot 1666 Batu 7 1/2 Bukit Darat Tanjung Kling 76400 Melaka Melaka Malaysia+016-10820553+Azure+2017+ZSBH0002
+Murni binti Usop+APU+AP038904+990401-20-7389+1957 Jln Kukup Batu 39 1/4 Kampung Rimba Terjun 82000 Pontian Pontian Johor 82000 Malaysia+014-00861535+GCD+2016+ZSBH0003
+Intan bin Putih+USCI+US047919+981005-18-7965+Gerai Pasar Minggu 25 22 Jln Raja Muda Musa Kampung Bahru 50300 Wilayah Persekutuan 50300 Malaysia+012-16839854+AWS+2020+ZSBH0004
+Azura bin Manjalara+USCI+US048443+971225-25-5412 Gerai Mdkp 5 Jln Changlun 06010 Changlun 06010 Malaysia Changlun Kedah 06010 Malaysia+012-02263351+Alicloud+2019+ZSBH0005
+Maya bin Intan+USCI+US505053+950108-06-6352+No. 32 M Jln Zirkon E 7/E Seksyen 7 40000 Shah Alam Shah Alam 40000 Malaysia+016-24070364+Oracle+2016+ZSBH0006
+Izzati bin Surintan+UM+UM610355+001005-30-9153+2D 51 Jln Pandan 3/10 Taman Pandan Jaya 55100 Wilayah Persekutuan 55100 Malaysia 55100 Malaysia+011-59386315+AWS+2017+ZSBH0007
+Puspawati binti Fareed+UM+UM409248+991106-35-4532+117 Kampung Gong Kemuning 16800 Pasir Puteh Pasir Puteh Kelantan 16800 Malaysia+016-07394548+Azure+2018+ZSBH0008
+Wati bin Puspa+UM+UM049589+911030-10-7845+11-33 Jalan Ibrahim 83000 Batu Pahat Johor Malaysia+012-93512228+GCD+2020+ZSBH0009
+Ayu bin Manjalara+UM+UM039681+960526-21-5024+Pusat Penjaja 49 Mdn Perhentian Medan Kidd 30200 Perak 30200 Malaysia+012-51619246+Oracle+2018+ZSBH0010
+Ayu bin Suriani+INTI+IN056832+001105-28-0082+3Rd Floor Puteri Park Plaza Taman Putra 68000 Ampang Ampang 68000 Malaysia+012-40119662+AWS+2016+ZSBH0011
+Pertiwi binti Tuah+INTI+IN040009+950819-04-0810+2 Kom Bebas Cukai Jln Ibrahim Sultan 80300 Johor 80300 Malaysia+014-12972548+Azure+2019+ZSBH0012
