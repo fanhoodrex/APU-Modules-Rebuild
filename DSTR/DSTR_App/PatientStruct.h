@@ -45,5 +45,5 @@ Patient::Patient(int patientId, string fullName, int patientAge, string gender, 
 }
 
 Patient::Patient() {
-
+	
 }

@@ -7,7 +7,6 @@
 #include <vector>
 #include "PatientStruct.h"
 
-
 regex int_rule("(\\+|-)?[[:digit:]]+");
 
 void init();
@@ -100,7 +99,6 @@ void display() {
 	}
 	cout << left << setw(5) << "ID" << internal << setw(25) << "Name" << internal << setw(15) << "isDisable" << internal << setw(15) << "Phone" << internal << setw(15) << "Age" << internal << setw(15) << "Gender" << internal << setw(15) << "Address" << internal << setw(15) << "Sickness" << internal << setw(15) << "Medicine" << internal << setw(15) << "Doctor" << '\n';
 	while (temp != NULL) {
-
 		cout << left << setw(5) << temp->patientId << internal << setw(25) << temp->fullName << internal << setw(15) << temp->isDisable << internal << setw(15) << temp->phone << internal << setw(15) << temp->patientAge << internal << setw(15) << temp->gender << internal << setw(15) << temp->address << internal << setw(15) << temp->sicknessDescription << internal << setw(15) << temp->medicineInformation << internal << setw(15) << temp->doctorName << '\n';
 		cout << endl;
 		temp = temp->next;
@@ -209,7 +207,6 @@ bool validatePatientId(int id) {
 void AddPatient() {
 	string fullName, gender, phone, address, sicknessDescription ,id;
 	int patientId, patientAge, isDisable;
-
 	bool match = true;
 	cout << "Please enter patient ID" << endl;
 	do {
@@ -264,7 +261,6 @@ void AddPatient() {
 	cout << "Please enter patient sickness description" << endl;
 	getline(cin, sicknessDescription);
 
-
 	cout << endl;
 	match = true;
 	string age;
@@ -303,20 +299,15 @@ void AddPatient() {
 		}
 	} while (!match);
 
-	
 	insertPatientIntoLinkedList(patientId, fullName, patientAge, gender, phone, address, sicknessDescription, isDisable, "-");
-
 	cout << endl << "Patient Id, " << id << " has been successfully created!" << endl;
-
 	returnToHome();
-
 }
 
 int main()
 {
 	tail = NULL;
 	head = NULL;
-
 	insertPatientIntoLinkedList(222, "Louis Vuitton", 22, "F", "123", "China", "Fever", 0, "Mec");
 	insertPatientIntoLinkedList(11, "John Smith", 20, "M", "239", "China", "Fever", 1, "Mec");
 	init();
