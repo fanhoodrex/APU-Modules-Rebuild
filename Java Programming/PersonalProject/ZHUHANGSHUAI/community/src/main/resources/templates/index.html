@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学习社区</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/community.css">
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default" th:replace="~{common/guideBar::guideBar}"></nav>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <h2><span class="glyphicon glyphicon-fire" aria-hidden="true"></span>热门话题</h2>
+                <hr>
+                <div class="media" th:each="question : ${questions}">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object img-rounded" th:src="${question.user.avatarUrl}">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading" th:text="${question.title}"></h4>
+                        <span class="text-desc">
+                            <span th:text="${question.user.accountName}"></span>  •  
+                            <span th:text="${question.commentCount}"></span>个回复   •  
+                            <span th:text="${question.viewCount}"></span>个浏览
+                            <br>
+                            <span th:text="${#dates.format(question.gmtCreate,'yyyy MMMM dd')}"></span>   •  最后更新:
+                            <span th:text="${#dates.format(question.gmtModified,'m')}"></span>分钟前
+                            
+                        </span>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <h2>热门话题</h2>
+                <hr>
+                <p>按照回复数来排序每个帖子</p>
+             
+            </div>
+        </div>
+    </div>
+</body>
+</html>

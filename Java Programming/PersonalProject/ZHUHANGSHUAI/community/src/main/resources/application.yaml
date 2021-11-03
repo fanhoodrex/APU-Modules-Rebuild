@@ -1,0 +1,31 @@
+#不要拿来做坏事
+github:
+  client:
+    id: 054c0a0f82173c59c6ee
+    secret: 18d4a1cc3a8ef3d46881e75ad1bf656f65236c4b
+    uri: http://localhost:8080
+
+spring:
+  datasource:
+    username: doadmin
+    password: Bi4gtY6yDnT7iHZF
+    url: jdbc:mysql://myjava-do-user-9562310-0.b.db.ondigitalocean.com:25060/community?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    maxActive: 10
+    maxWait: 3000
+    filters: stat,wall,log4j
+    
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    filters: stat,wall,log4j
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    useGlobalDataSourceStat: true
+#    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#   ??mybatis
+mybatis:
+  type-aliases-package: org.zhs.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+# 开启自动匹配驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
