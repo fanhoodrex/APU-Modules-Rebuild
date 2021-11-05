@@ -15,10 +15,7 @@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">热门话题 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">最新帖子</a></li>
-            </ul>
+            
             <form class="navbar-form navbar-left">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="想查点什么?">
@@ -31,11 +28,14 @@
                 </li>
                 <li class="dropdown" th:if="${session.user != null}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false" th:text="${session.user.getAccountName()}"><span class="caret"></span></a>
+                       aria-expanded="false">
+                        <span th:text="${session.user.getAccountName()}"></span>
+                        <span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">消息中心</a></li>
+                        <li><a th:href = "@{/profile/questions(id=${session.user.id})}">我的帖子</a></li>
                         <li><a href="#">个人资料</a></li>
-                        <li><a href="#">退出登录</a></li>
+                        <li><a href="/clear">退出登录</a></li>
                     </ul>
                 </li>
                 <li th:if="${session.user == null}">

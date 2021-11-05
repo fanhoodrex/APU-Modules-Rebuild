@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<nav aria-label="Page navigation" th:fragment="pageNavigation">
+    <ul class="pagination">
+        <li th:if="${allPage.showPrevious}"> 
+            <a th:href="@{/(page=${allPage.page - 1})}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li th:each="page : ${allPage.pages}" th:class="${allPage.page == page} ? 'active' : ''">
+            <a th:href="@{/(page=${page})}" th:text="${page}"></a>
+        </li>
+        
+        <li th:if="${allPage.showNext}">
+            <a th:href="@{/(page=${allPage.page + 1})}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>

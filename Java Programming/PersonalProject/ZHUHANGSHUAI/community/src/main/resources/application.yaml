@@ -29,3 +29,8 @@ mybatis:
 # 开启自动匹配驼峰命名
   configuration:
     map-underscore-to-camel-case: true
+server:
+  tomcat:
+    remoteip:
+      host-header: 127\.0\.0\.1
+      protocol-header: socks5

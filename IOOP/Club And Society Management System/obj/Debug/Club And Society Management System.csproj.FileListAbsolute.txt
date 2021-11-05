@@ -1,0 +1,19 @@
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\bin\Debug\Club And Society Management System.exe.config
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\bin\Debug\Club And Society Management System.exe
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\bin\Debug\Club And Society Management System.pdb
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club And Society Management System.csproj.AssemblyReference.cache
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.adminDashboard.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.Authentication.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.clubAchievementMaintenance.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.clubActivityMaintenance.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.clubMaintenance.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.clubMembershipMaintenance.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.Properties.Resources.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.stdDashboard.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.studentRegister.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.viewClub.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club_And_Society_Management_System.viewClubDetails.resources
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club And Society Management System.csproj.GenerateResource.cache
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club And Society Management System.csproj.CoreCompileInputs.cache
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club And Society Management System.exe
+C:\Git\APU_Modules_Rebuild\IOOP\Club And Society Management System\obj\Debug\Club And Society Management System.pdb

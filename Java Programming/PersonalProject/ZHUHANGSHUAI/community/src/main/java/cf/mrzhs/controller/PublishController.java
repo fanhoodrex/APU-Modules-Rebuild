@@ -19,10 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 public class PublishController {
     @Autowired
     private QuestionMapper questionMapper;
-
-    @Autowired
-    private UserMapper userMapper;
-
+    
     @Autowired
     private CheckProvider checkProvider;
     
@@ -50,13 +47,6 @@ public class PublishController {
             HttpServletRequest request
     ) {
         User user = checkProvider.checkLoginUser(request.getCookies());
-        if (user != null) {
-            request.getSession().setAttribute("user", user);
-        } else {
-            model.addAttribute("error", "您未登录,请先登录之后再发表帖子");
-            return "publish";
-        }
-
         Question question = new Question();
         question.setTitle(title);
         question.setDescription(description);

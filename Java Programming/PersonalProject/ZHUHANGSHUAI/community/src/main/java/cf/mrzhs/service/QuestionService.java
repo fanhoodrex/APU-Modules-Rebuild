@@ -1,5 +1,6 @@
 package cf.mrzhs.service;
 
+import cf.mrzhs.dto.PageDTO;
 import cf.mrzhs.dto.QuestionDTO;
 import cf.mrzhs.mapper.QuestionMapper;
 import cf.mrzhs.mapper.UserMapper;
@@ -19,8 +20,9 @@ public class QuestionService {
     @Autowired
     private UserMapper userMapper;
     
-    public List<QuestionDTO> IndexList() {
-        List<Question> questionList = questionMapper.IndexList();
+    public PageDTO IndexList(Integer page, Integer size) {
+        Integer offSet = size*(page-1);
+        List<Question> questionList = questionMapper.IndexList(offSet,size);
         List<QuestionDTO> questionDTOList = new ArrayList<>();
         for (Question question : questionList) {
             
@@ -30,12 +32,26 @@ public class QuestionService {
             BeanUtils.copyProperties(question,questionDTO);
             questionDTO.setUser(user);
 //            通过当前时间减去修改时间来判断多少分钟前修改
-            
             questionDTO.setGmtModified(System.currentTimeMillis() - question.getGmtModified());
-            System.out.println(questionDTO.getGmtModified());
             questionDTOList.add(questionDTO);
             
+            
         }
-        return questionDTOList;
+//        总页数
+        Integer totalCount = questionMapper.count();
+        PageDTO pageDTO = new PageDTO();
+        pageDTO.setQuestions(questionDTOList);
+        pageDTO.setPagination(totalCount,page,size);
+        
+        return pageDTO;
+    }
+    
+    public QuestionDTO getQuestionById(Integer id){
+        QuestionDTO questionDTO = new QuestionDTO();
+        Question question = questionMapper.getQuestionById(id);
+        User user = userMapper.findById(question.getCreator());
+        BeanUtils.copyProperties(question,questionDTO);
+        questionDTO.setUser(user);
+        return questionDTO;
     }
 }

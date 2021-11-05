@@ -61,9 +61,10 @@ public class LoginController {
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
             user.setAvatarUrl(githubUser.getAvatar_url());
-            mapper.insert(user);
-            response.addCookie(new Cookie("token", uuid));
-
+            if (user.getAccountName() != null){
+                mapper.insert(user);
+                response.addCookie(new Cookie("token", uuid));
+            }
             return "redirect:/index";
         }
     }
