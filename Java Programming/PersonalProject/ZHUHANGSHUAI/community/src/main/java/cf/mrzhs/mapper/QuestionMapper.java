@@ -2,10 +2,7 @@ package cf.mrzhs.mapper;
 
 import cf.mrzhs.dto.QuestionDTO;
 import cf.mrzhs.pojo.Question;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -28,4 +25,14 @@ public interface QuestionMapper {
     
     @Select("SELECT * FROM question WHERE id=#{id}")
     Question getQuestionById(@Param("id") Integer id);
+    
+    @Update("UPDATE question set title=#{title},description=#{description}, tag=#{tag} where id=#{id}")
+    void modify(@Param("title") String title,
+                    @Param("description") String description,
+                    @Param("tag") String tag,
+                    @Param("id") Integer id);
+    
+    @Update("UPDATE question set view_count=#{view} where id = #{id}")
+    void addView(@Param("view") Integer view,
+                 @Param("id") Integer id);
 }

@@ -24,14 +24,13 @@
                         </a>
                     </div>
                     <div class="media-body">
-                        <a th:href="@{/singleQuestion(id=${question.id})}"><h4 class="media-heading" th:text="${question.title}"></h4></a>
+                        <a th:href="@{/singleQuestion(id=${question.id}, view=${question.viewCount})}"><h4 class="media-heading" th:text="${question.title}"></h4></a>
                         <span class="text-desc">
                                 <span th:text="${question.user.accountName}"></span>  •  
                             <span th:text="${question.commentCount}"></span>个回复   •  
                             <span th:text="${question.viewCount}"></span>个浏览
                             <br>
-                            <span th:text="${#dates.format(question.gmtCreate,'yyyy MMMM dd')}"></span>   •  最后更新:
-                            <span th:text="${#dates.format(question.gmtModified,'m')}"></span>分钟前
+                            <span th:text="${#dates.format(question.gmtCreate,'yyyy MMMM dd')}"></span>
                             
                                         
                         </span>

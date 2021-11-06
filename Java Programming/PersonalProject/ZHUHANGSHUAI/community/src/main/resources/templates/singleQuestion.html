@@ -13,7 +13,68 @@
 
 <body>
 <nav class="navbar navbar-default" th:replace="~{common/guideBar::guideBar}"></nav>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <div class="row" style="margin-left: 5px; margin-right: 5px">
+                <div class="page-header">
+                    <img style="float: right" class="media-object img-rounded" th:src="${targetQuestion.user.avatarUrl}"
+                         th:alt="${targetQuestion.user.avatarUrl}">
 
+                    <h1 th:text="${targetQuestion.title}"></h1>
+                    <span class="text-desc">
+                <small th:text="${targetQuestion.user.accountName}"></small>|
+                <small th:text="${targetQuestion.commentCount}"></small>个回复 |
+                    <span th:text="${targetQuestion.viewCount}"></span>个浏览
+                </span>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body" th:text="${targetQuestion.description}">
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="float: right"
+                     th:if="${user.id} == ${targetQuestion.user.id}">
+                    <a th:href="@{/modify(id=${targetQuestion.id})}">
+                        <button type="button" class="btn btn-success btn-publish">修改</button>
+                    </a>
+                </div>
+
+            </div>
+            <hr>
+            <h2 class="glyphicon glyphicon-pencil" aria-hidden="true">评论区</h2>
+            <br>
+            <br>
+
+            <div class="panel panel-info" th:each="answer : ${answers}">
+                <div class="panel-heading">
+                    <h3 class="panel-title">[[${answer.answerName}]]</h3>
+                </div>
+                <div class="panel-body" style="word-break: break-word">
+                    [[${answer.content}]]
+                    <p style="float:right;" class="text-desc" th:text="${answer.gmtCreate == 0? '' : #dates.format(answer.gmtCreate, 'yyyy年MM月dd日')}"></p>
+                </div>
+            </div>
+            <div>
+                添加评论
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+
+            <h2 class="glyphicon glyphicon-pencil" aria-hidden="true">说明</h2>
+            <hr>
+            <p>这是一个用来记录个人学习的网站</p>
+            <p>通过使用bootstrap来实现一些简单的前端样式</p>
+            <p>实现了通过github登录</p>
+            <p>简单的分页查询</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

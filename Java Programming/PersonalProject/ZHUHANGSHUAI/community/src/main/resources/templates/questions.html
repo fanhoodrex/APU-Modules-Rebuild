@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <div class="list-group">
-                <a href="#" class="list-group-item active" th:each="myQuestions : ${allQuestions}">
+                <a th:href="@{/modify(id=${myQuestions.id})}" class="list-group-item active" th:each="myQuestions : ${allQuestions}">
                     <h4 class="list-group-item-heading" th:text="${myQuestions.title}"></h4>
                     <p class="list-group-item-text" th:text="${myQuestions.description}"></p>
                 </a>
