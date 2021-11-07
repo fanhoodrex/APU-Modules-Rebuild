@@ -54,4 +54,11 @@ public class QuestionService {
         questionDTO.setUser(user);
         return questionDTO;
     }
+    public QuestionDTO getQuestionDTO(Question question){
+        QuestionDTO questionDTO = new QuestionDTO();
+        User user = userMapper.findById(question.getCreator());
+        BeanUtils.copyProperties(question,questionDTO);
+        questionDTO.setUser(user);
+        return questionDTO;
+    }
 }

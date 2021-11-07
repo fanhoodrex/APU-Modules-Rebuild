@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>学习社区</title>
+    <title>查询 - 学习社区</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/community.css">
@@ -17,27 +17,26 @@
             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                 <h2><span class="glyphicon glyphicon-fire" aria-hidden="true"></span>最新话题</h2>
                 <hr>
-                <div class="media" th:each="question : ${allPage.questions}">
+                <div class="media" th:each="target : ${targets}">
                     <div class="media-left">
                         <a href="#">
-                            <img class="media-object img-rounded" th:src="${question.user.avatarUrl}">
+                            <img class="media-object img-rounded" th:src="${target.user.avatarUrl}">
                         </a>
                     </div>
                     <div class="media-body">
-                        <a th:href="@{/singleQuestion(id=${question.id}, view=${question.viewCount})}"><h4 class="media-heading" th:text="${question.title}"></h4></a>
+                        <a th:href="@{/singleQuestion(id=${target.id}, view=${target.viewCount})}"><h4 class="media-heading" th:text="${target.title}"></h4></a>
                         <span class="text-desc">
-                                <span th:text="${question.user.accountName}"></span>  •  
-                            <span th:text="${question.commentCount}"></span>个回复   •  
-                            <span th:text="${question.viewCount}"></span>个浏览
+                                <span th:text="${target.user.accountName}"></span>  •  
+                            <span th:text="${target.commentCount}"></span>个回复   •  
+                            <span th:text="${target.viewCount}"></span>个浏览
                             <br>
-                            <span th:text="${#dates.format(question.gmtCreate,'yyyy MMMM dd')}"></span>
+                            <span th:text="${#dates.format(target.gmtCreate,'yyyy MMMM dd')}"></span>
                             
                                         
                         </span>
                     </div>
                     <hr>
                 </div>
-                <nav aria-label="Page navigation" th:replace="~{common/pageNavigation::pageNavigation}"></nav>
             </div>
             
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">

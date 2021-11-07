@@ -82,6 +82,8 @@ public class PublishController {
         QuestionDTO question = questionService.getQuestionById(id);
         model.addAttribute("targetQuestion",question);
         model.addAttribute("user",question.getUser());
+        String[] tags = tag.split(",");
+        model.addAttribute("tags",tags);
         return "singleQuestion";
     }
 }

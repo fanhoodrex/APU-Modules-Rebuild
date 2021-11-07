@@ -15,7 +15,7 @@ spring:
     initialSize: 5
     maxActive: 10
     maxWait: 3000
-    filters: stat,wall,log4j
+    filters: stat,wall
 
 
 #    type: com.alibaba.druid.pool.DruidDataSource

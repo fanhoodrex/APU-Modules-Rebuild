@@ -11,6 +11,6 @@ import java.util.List;
 @Mapper
 @Repository
 public interface MyQuestionsMapper {
-    @Select("SELECT * FROM question WHERE creator = #{id}")
+    @Select("SELECT * FROM question WHERE creator = #{id} ORDER BY gmt_create DESC")
     List<MyQuestions> getAllMyQuestions(@Param("id") String id);
 }
