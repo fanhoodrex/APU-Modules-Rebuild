@@ -1,13 +1,11 @@
-#Libraries
-install.packages("naivebayes", dependencies=TRUE, repos='http://cran.rstudio.com/')
+# Libraries
+install.packages("naivebayes", dependencies = TRUE, repos='http://cran.rstudio.com/')
+install.packages(c("e1071","dplyr","ggplot2","psych"))
+
 library(naivebayes)
-install.packages("e1071")
 library(e1071)
-install.packages("dplyr")
 library(dplyr)
-install.packages("ggplot2")
 library(ggplot2)
-install.packages("psych")
 library(psych)
 
 # Data

@@ -1,6 +1,5 @@
-install.packages("arules")
+install.packages(c("arules", "arulesViz"))
 library(arules)
-install.packages("arulesViz")
 library (arulesViz)
 library(RColorBrewer)
 
