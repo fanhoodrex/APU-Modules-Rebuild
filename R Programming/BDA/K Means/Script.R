@@ -1,17 +1,20 @@
 # Importing the dataset
 dataset = read.csv(file.choose())
 
-#Feature Selection
+# Feature Selection
 fs = dataset[4:5] # select the 4st, 5st column
 
-#Pre-processing
-na=sum(is.na(fs))
+# Pre-processing
+na = sum(is.na(fs))
 
-#Data Partition
-#install.packages('caTools')
+# packages installation
+install.packages('caTools')
+install.packages("cluster")
+library(cluster)
 library(caTools)
-set.seed(123)
 
+# Data Partition
+set.seed(123)
 partition = sample.split(fs,SplitRatio = 0.7)
 partition
 
@@ -37,16 +40,15 @@ plot(1:10,
      type = 'b',
      main = paste('The Elbow Method'),
      xlab = 'Number of clusters',
-     ylab = 'WCSS')
+     ylab = 'WCSS'
+)
 
 # Fitting K-Means to the dataset
 set.seed(29)
-kmeans = kmeans(x = fs, centers = 5) # why use
+kmeans = kmeans(x = fs, centers = 5)
 y_kmeans = kmeans$cluster
 
 # Visualising the clusters
-#install.packages("cluster")
-library(cluster)
 clusplot(fs,
          y_kmeans,
          lines = 0,
@@ -57,4 +59,5 @@ clusplot(fs,
          span = TRUE,
          main = paste('Clusters of customers'),
          xlab = 'Annual Income',
-         ylab = 'Spending Score')
+         ylab = 'Spending Score'
+)
