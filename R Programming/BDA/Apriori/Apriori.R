@@ -1,13 +1,11 @@
-install.packages(c("arules", "arulesViz"))
+install.packages(c("arules", "arulesViz","RColorBrewer"))
 library(arules)
 library (arulesViz)
 library(RColorBrewer)
 
-# in-build dataset
-data("Groceries"); # data => to read inbuild datset
+data("Groceries"); # read inbuild datset
 class(Groceries);
 str(Groceries);
-
 # Groceries = as(data.frame(lapply(Groceries, as.character), stringsAsFactors=T), "transactions")
 inspect(head(Groceries, 2));
 
@@ -36,7 +34,6 @@ d <- inspect(head(sort(grocery_rules_increased_support, by = "confidence"), 2));
 
 # This generates only one rule in the output.
 subsets <- which(colSums(is.subset(grocery_rules, grocery_rules)) > 1);
-
 grocery_rules <- grocery_rules[-subsets];
 
 # This gives more than 1,500,000 rules
