@@ -13,11 +13,7 @@ library(plotrix)
 library(caret)
 library(tidyverse)
 
-# Set Working Directory
-setwd("D:/APU_Courses/2nd Semester/Applied Machine Learning (CT046-3-M-AML)/Assignment")
-
-# Dataset importing
-atp = read.csv('Tennis_Dataset.csv')
+# Dataset importing 'Tennis_Dataset.csv'
 
 # Data Exploration and Summary Generation
 #create_report(atp)
@@ -33,8 +29,6 @@ atp$year = as.numeric(atp$year)
 # Identify if a match was an Upset
 atp$upset = ifelse (as.numeric(atp$WRank) > as.numeric(atp$LRank), 0, 1)
 atp$upset = as.factor(atp$upset)
-
-# ////////////////////////////////////////////////////////
 
 # Court frequency
 ggplot(atp, aes(x = fct_infreq(Court), fill = Court)) + 
