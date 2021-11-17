@@ -42,37 +42,33 @@ hr_active = hr_active.drop_duplicates(subset="EmployeeID", keep="last",inplace=F
 statusTerminatedCount = len(dataset[dataset.STATUS == "TERMINATED"])
 statusActiveCount = len(dataset[dataset.STATUS == "ACTIVE"])
 
-ggplot(empset)+geom_bar(aes(x=BUSINESS_UNIT, fill=STATUS))
+ggplot(empset)+geom_bar(aes(x = BUSINESS_UNIT, fill = STATUS))
 
-TerminateData<- empset %>% filter(STATUS=="Employees")
+TerminateData<- empset %>% filter(STATUS == "Employees")
 
-ggplot(TerminateData)+geom_bar(aes(x=STATUS_YEAR, fill=termtype_desc))
-
-ggplot(TerminateData)+geom_bar(aes(x=STATUS_YEAR, fill=termreason_desc))
-
-ggplot(TerminateData)+geom_bar(aes(x=as.factor(department_name), fill=as.factor(termreason_desc)))+
-  theme(axis.text.x = element_text(angle=90, hjust=1,vjust=0.5))
+ggplot(TerminateData)+geom_bar(aes(x = STATUS_YEAR, fill=termtype_desc))
+ggplot(TerminateData)+geom_bar(aes(x = STATUS_YEAR, fill=termreason_desc))
+ggplot(TerminateData)+geom_bar(aes(x = as.factor(department_name), fill = as.factor(termreason_desc)))+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 
 library(rattle)
 library(magrittr)
 library(randomForest)
-crv$seed=42 
+crv$seed = 42 
 
-set.seed(crv$seed) 
+set.seed(crv$seed)
 
-empNum<-nrow(empset)
+empNum <- nrow(empset)
+empTrain <- subset(empset, STATUS_YEAR < 2015)
+empTest <- subset(empset, STATUS_YEAR == 2015)
 
-empTrain<-subset(empset,STATUS_YEAR<2015)
-empTest<-subset(empset,STATUS_YEAR==2015)
-
-MYinput= c("age", "length_of_service",    "gender_full", "STATUS_YEAR", "BUSINESS_UNIT")
-MYnumeric= c("age", "length_of_service", "STATUS_YEAR")
+MYinput = c("age", "length_of_service",    "gender_full", "STATUS_YEAR", "BUSINESS_UNIT")
+MYnumeric = c("age", "length_of_service", "STATUS_YEAR")
 MYcategoric = c("gender_full", "BUSINESS_UNIT")
-MYtarget= "STATUS"
+MYtarget = "STATUS"
 MYident = "EmployeeID"
 MYTrainingData<-empTrain[c(MYinput, MYtarget)]
 MYTestData<-empTest[c(MYinput, MYtarget)]
-
 
 library(rpart)
 myrpart<-rpart(STATUS~.,
@@ -92,14 +88,13 @@ sub_col = c('age'
             ,'STATUS_YEAR'
             ,'BUSINESS_UNIT'
             ,'STATUS')
-
 attr_data_sub = attrition_data[,sub_col]
 
 library(caret)
 ## Loading required package: lattice
 set.seed(123456)
-attr_data_sub$STATUS01 = ifelse(attr_data_sub$STATUS=='ACTIVE',1,0)
-partitionIndex = createDataPartition(attr_data_sub$STATUS01,p=0.8,list=FALSE)
+attr_data_sub$STATUS01 = ifelse(attr_data_sub$STATUS == 'ACTIVE', 1,0)
+partitionIndex = createDataPartition(attr_data_sub$STATUS01, p = 0.8, list = FALSE)
 
 attr_data_sub.train = attr_data_sub[partitionIndex,]
 attr_data_sub.test = attr_data_sub[-partitionIndex,]
@@ -107,10 +102,9 @@ prop.table(table(attr_data_sub.train$STATUS01))
 prop.table(table(attr_data_sub.train$STATUS01))
 
 library('DMwR')
-# Loading required package: methods
-# Loading required package: grid
+# Loading required package: methods & grid
 attr_data_sub.train$STATUS01 <- as.factor(attr_data_sub.train$STATUS01)
-attr_data_sub.train <- SMOTE(STATUS01 ~ ., attr_data_sub.train, perc.over = 100, perc.under=200)
+attr_data_sub.train <- SMOTE(STATUS01 ~ ., attr_data_sub.train, perc.over = 100, perc.under = 200)
 prop.table(table(attr_data_sub.train$STATUS01))
 
 set.seed(123456)
