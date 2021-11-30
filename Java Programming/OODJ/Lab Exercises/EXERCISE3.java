@@ -11,8 +11,7 @@ public class EXERCISE3 {
         System.out.print("Please enter the integer between 0 and 1000:");
         int num = readObject.nextInt();
         while (num > 0){ // while loop to iterate and sum up the digits
-            int digit = sum % 10;
-            sum += digit;
+            sum += num % 10;
             num = num / 10;
         }
         System.out.println("the sum of all its digit is " + sum);
