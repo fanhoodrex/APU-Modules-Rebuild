@@ -9,7 +9,7 @@ public class EXERCISE5 {
         Scanner readObject = new Scanner(System.in);
         System.out.print("Please enter an integer between 0 and 128:");
         int num = readObject.nextInt();
-        char ASCII = (char) num;
+        char ASCII = (char) num; // Java Type Casting
         System.out.println("The ASCII code for " + num + " is " + ASCII);
     }
 }
