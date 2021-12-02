@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EXERCISE7 {
+public class Exercise7 {
     /* 7.Write a program that prompts the user to enter assignment marks and displays the grade of the keyed in marks.*/
     public static void main(String[] args) {
         Scanner readObject = new Scanner(System.in);

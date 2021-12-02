@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EXERCISE4 {
+public class Exercise4 {
     // 4.Write a program that converts an uppercase letter to a lowercase letter.
     public static void main(String[] args) {
         Scanner readObject = new Scanner(System.in);
