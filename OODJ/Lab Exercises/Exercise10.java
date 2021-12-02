@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Exercise10 {
     /*
-    10.Use do-while construct, write a program that prompts the users to continue the program execution.
+    10. Use do-while construct, write a program that prompts the users to continue the program execution.
     “Yes” to continue the program and “No” to terminate the program.
      */
     public static void main(String[] args) {

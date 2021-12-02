@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Exercise02 {
     /*
-    2.Write a program that reads in the radius and length of a cylinder and computes volume using the following formulas:
+    2. Write a program that reads in the radius and length of a cylinder and computes volume using the following formulas:
     area = radius * radius * PI
     volume = area * length
     */
