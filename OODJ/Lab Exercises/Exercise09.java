@@ -1,4 +1,4 @@
-public class Exercise9 {
+public class EXERCISE9 {
     public static void main(String[] args) {
         float fee = 10000;
         for (int i = 1; i <= 10; i++) {
