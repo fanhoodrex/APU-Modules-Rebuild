@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exercise5 {
+public class Exercise05 {
     /*
     5.Write a program that receives an ASCII code (an integer between 0 and 128) and displays its character.
     For example, if the user enters 97, the program displays character ‘a’.
