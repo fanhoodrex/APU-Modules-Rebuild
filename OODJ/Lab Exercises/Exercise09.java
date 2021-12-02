@@ -1,4 +1,4 @@
-public class EXERCISE9 {
+public class Exercise09 {
     /*
     9. Suppose that the tuition of a university is RM10000 this year and this tuition fee increases 5% every year.
     Write a program that uses a loop to compute the tuition in ten years.
