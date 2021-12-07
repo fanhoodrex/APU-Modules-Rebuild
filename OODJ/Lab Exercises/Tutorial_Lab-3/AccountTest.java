@@ -1,4 +1,4 @@
-public class testAccount {
+public class AccountTest {
     public static void main(String[] args) {
         Account acc = new Account();
         System.out.println("id:" + acc.getID() + " Balance:" + acc.getBalance() + " Annual Interest Rate:" + acc.getAnnualInterestRate());
