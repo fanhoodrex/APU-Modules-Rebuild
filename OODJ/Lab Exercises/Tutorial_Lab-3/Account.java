@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Account {
     private int id;
     private double balance;
@@ -25,7 +23,7 @@ public class Account {
     }
 
     // set method
-    public void setId() {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -52,12 +50,5 @@ public class Account {
 
     public void deposit(double amount) {
         this.balance += amount;
-    }
-
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        Account acc1 = new Account();
-        acc1.setId(1222);
-        System.out.println("This ID is " + acc1.getID());
     }
 }
