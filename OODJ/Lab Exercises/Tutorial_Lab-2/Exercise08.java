@@ -4,10 +4,9 @@ public class Exercise08 {
     The array capacity is 100. You are required to use for-each construct (enhanced for).
      */
     public static void main(String[] args) {
-        int arraySize = 100;
-        double[] array = new double[arraySize];
+        double[] array = new double[100]; // array size of 100
 
-        for (int i = 0; i < arraySize; i++) {
+        for (int i = 0; i < 100; i++) {
             array[i] = (double) Math.round(Math.random());// fill the array with 100 random number
         }
 
