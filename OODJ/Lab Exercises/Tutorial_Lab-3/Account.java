@@ -3,10 +3,10 @@ public class Account {
     private double balance;
     private double annualInterestRate;
 
-    public Account() {
-        this.id = 0;
-        this.balance = 0;
-        this.annualInterestRate = 0;
+    public Account(int id, double bal, double rate) { // Constructor
+        this.id = id;
+        this.balance = bal;
+        this.annualInterestRate = rate;
     }
 
     // get method
@@ -51,13 +51,13 @@ public class Account {
     public void deposit(double amount) {
         this.balance += amount;
     }
-
+    /*
+    1.	Write a class named Account to model accounts. Write a test program to test the Account class.
+    In the client program, create an Account object with an account ID of 1222, a balance of 20000, and an annual interest rate of 4.5%.
+    Use the withdraw method to withdraw $2500, use the deposit method to deposit $3000, and print the balance and the monthly interest. 
+    */
     public static void main(String[] args) {
-        Account acc = new Account();
-        System.out.println("id:" + acc.getID() + " Balance:" + acc.getBalance() + " Annual Interest Rate:" + acc.getAnnualInterestRate());
-        acc.setId(1222);
-        acc.setBalance(20000);
-        acc.setAnnualInterestRate(0.045);
+        Account acc = new Account(1222,20000,0.045);
         System.out.println("id:" + acc.getID() + " Balance:" + acc.getBalance() + " Annual Interest Rate:" + acc.getAnnualInterestRate());
         System.out.println("After withdrawal...");
         acc.withdraw(2500);
