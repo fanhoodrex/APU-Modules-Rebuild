@@ -4,9 +4,9 @@ public class Account {
     private double annualInterestRate;
 
     public Account() {
-        this.id = 1222;
-        this.balance = 20000;
-        this.annualInterestRate = 0.045;
+        this.id = 0;
+        this.balance = 0;
+        this.annualInterestRate = 0;
     }
 
     // get method
@@ -50,5 +50,20 @@ public class Account {
 
     public void deposit(double amount) {
         this.balance += amount;
+    }
+
+    public static void main(String[] args) {
+        Account acc = new Account();
+        System.out.println("id:" + acc.getID() + " Balance:" + acc.getBalance() + " Annual Interest Rate:" + acc.getAnnualInterestRate());
+        acc.setId(1222);
+        acc.setBalance(20000);
+        acc.setAnnualInterestRate(0.045);
+        System.out.println("id:" + acc.getID() + " Balance:" + acc.getBalance() + " Annual Interest Rate:" + acc.getAnnualInterestRate());
+        System.out.println("After withdrawal...");
+        acc.withdraw(2500);
+        System.out.println("id:" + acc.getID() + " Balance:" + acc.getBalance() + " Annual Interest Rate:" + acc.getAnnualInterestRate());
+        System.out.println("After Deposit...");
+        acc.deposit(3000);
+        System.out.println("id:" + acc.getID() + " Balance:" + acc.getBalance() + " Annual Interest Rate:" + acc.getAnnualInterestRate());
     }
 }

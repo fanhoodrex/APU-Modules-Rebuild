@@ -36,4 +36,16 @@ public class Rectangle {
     public double findPerimeter() {
         return this.width * 2 + this.height * 2;
     }
+    /*
+    Write a client program to test the class Rectangle. In the client program, create two Rectangle objects.
+    Assign width 5 and height 50 each of the objects.
+    Assign colour yellow. Display the properties of both objects and their areas.
+     */
+    public static void main(String[] args) {
+        Rectangle rectg1 = new Rectangle(5,50,"Yellow");
+        System.out.println("The width is: " + rectg1.getwidth());
+        System.out.println("The height is: " + rectg1.getHeight());
+        System.out.println("The color is: " + rectg1.getColor());
+        System.out.println("The area is: " + rectg1.findArea());
+    }
 }
