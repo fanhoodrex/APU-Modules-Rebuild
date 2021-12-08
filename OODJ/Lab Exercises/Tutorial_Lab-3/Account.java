@@ -52,8 +52,8 @@ public class Account {
         this.balance += amount;
     }
     /*
-    1.	Write a class named Account to model accounts. Write a test program to test the Account class.
-    In the client program, create an Account object with an account ID of 1222, a balance of 20000, and an annual interest rate of 4.5%.
+    Write a test program to test the Account class. In the client program,
+    create an Account object with an account ID of 1222, a balance of 20000, and an annual interest rate of 4.5%.
     Use the withdraw method to withdraw $2500, use the deposit method to deposit $3000, and print the balance and the monthly interest. 
     */
     public static void main(String[] args) {

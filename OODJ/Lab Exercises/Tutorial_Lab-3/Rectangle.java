@@ -38,7 +38,7 @@ public class Rectangle {
     }
     /*
     Write a client program to test the class Rectangle. In the client program, create two Rectangle objects.
-    Assign width 5 and height 50 each of the objects.
+    Assign width 5 and height 50 each of the objects. 
     Assign colour yellow. Display the properties of both objects and their areas.
      */
     public static void main(String[] args) {
