@@ -14,7 +14,7 @@ public class Time {
     public int getHour() { return this.hour; }
     public int getMinute() { return this.minute; }
     public int getSecond() { return this.second; }
-    
+
     /*
     Write a client program to test the Time class.
     In the client program, create a Time object and display hour, minute and second using the get methods.
@@ -24,5 +24,13 @@ public class Time {
         System.out.println("Current hour:" + now.getHour());
         System.out.println("Current minute:" + now.getMinute());
         System.out.println("Current second:" + now.getSecond());
+
+        Time[] times = new Time[5]; // array of size 5 storing Time object
+        for (int i = 0; i < times.length; i++) {
+            Time currentTime = new Time();
+            System.out.println("Current time: " + currentTime);
+            times[i] = currentTime;
+            Thread.sleep(millis 5000);
+        }
     }
-}
+}   
