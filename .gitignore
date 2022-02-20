@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 .DS_Store
+PFDA/Placement_Data_Full_Class/.Rhistory
