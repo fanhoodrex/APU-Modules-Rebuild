@@ -1,13 +1,19 @@
 /**
  * Employee
  */
-public class Employee {
-    protected String office;
-    protected double salary;
-    protected MyDate dateHired;
+public class Employee extends Person{
+    private String office;
+    private double salary;
+    private String date_hired;
 
-    @Override
+    public Employee(String name, String address, int phoneNo, String email, String officename, double salaryamount, String datehired){
+        super(name, address, phoneNo, email);
+        this.office = officename;
+        this.salary = salaryamount;
+        this.date_hired = datehired;
+    }
+
     public String toString() {
-        return "Employee:"  + super.name;
+        return "Class: Employee \nName: " + name;
     }    
 }
